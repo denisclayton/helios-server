@@ -1,5 +1,7 @@
-
+import ldap
 import os, json
+
+from django_auth_ldap.config import LDAPSearch, GroupOfNamesType
 
 # go through environment variables and override them
 def get_from_env(var, default):
@@ -196,7 +198,7 @@ HELIOS_VOTERS_EMAIL = True
 HELIOS_PRIVATE_DEFAULT = False
 
 # authentication systems enabled
-#AUTH_ENABLED_AUTH_SYSTEMS = ['password','facebook','twitter', 'google', 'yahoo']
+#AUTH_ENABLED_AUTH_SYSTEMS = ['password','facebook','twitter', 'google', 'yahoo','ldap']
 AUTH_ENABLED_AUTH_SYSTEMS = get_from_env('AUTH_ENABLED_AUTH_SYSTEMS', 'google').split(",")
 AUTH_DEFAULT_AUTH_SYSTEM = get_from_env('AUTH_DEFAULT_AUTH_SYSTEM', None)
 
@@ -227,6 +229,33 @@ CAS_USERNAME = get_from_env('CAS_USERNAME', "")
 CAS_PASSWORD = get_from_env('CAS_PASSWORD', "")
 CAS_ELIGIBILITY_URL = get_from_env('CAS_ELIGIBILITY_URL', "")
 CAS_ELIGIBILITY_REALM = get_from_env('CAS_ELIGIBILITY_REALM', "")
+
+# ldap
+# see configuration example at https://pythonhosted.org/django-auth-ldap/example.html
+AUTH_LDAP_SERVER_URI = "ldap://ldap.example.com" # replace by your Ldap URI
+AUTH_LDAP_BIND_DN = ""
+AUTH_LDAP_BIND_PASSWORD = ""
+AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=User,dc=example,dc=com",
+    ldap.SCOPE_SUBTREE, "(uid=%(user)s)"
+)
+# Populate the Django user from the LDAP directory.
+AUTH_LDAP_USER_ATTR_MAP = {
+    "first_name": "givenName",
+    "last_name": "sn",
+    "email": "mail",
+}
+AUTH_LDAP_GROUP_TYPE = GroupOfNamesType(name_attr="cn")
+AUTH_LDAP_FIND_GROUP_PERMS = True
+AUTH_LDAP_BIND_AS_AUTHENTICATING_USER = True
+AUTH_LDAP_CACHE_GROUPS = True
+AUTH_LDAP_GROUP_CACHE_TIMEOUT = 3600
+AUTH_LDAP_ALWAYS_UPDATE_USER = False
+
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'django_auth_ldap.backend.LDAPBackend',
+)
 
 # email server
 EMAIL_HOST = get_from_env('EMAIL_HOST', 'localhost')
