@@ -43,11 +43,14 @@ def ldap_login_view(request):
                 username = form.cleaned_data['username'].strip() 
                 password = form.cleaned_data['password'].strip() 
 
-                auth = LDAPBackend()
+                auth = backend.CustomLDAPBackend()
                 user = auth.authenticate(username, password)
                 
                 if user:
-                    request.session['ldap_user']  = user
+                    request.session['ldap_user']  = {
+                        'user_id': user.email,
+                        'name': user.first_name + ' ' + user.last_name,
+                    }
                     return HttpResponseRedirect(reverse(after))
                 else:
                     error = 'Bad Username or Password'
@@ -62,9 +65,9 @@ def ldap_login_view(request):
 def get_user_info_after_auth(request):   
     return {
        'type': 'ldap', 
-       'user_id' : request.session['ldap_user'].email, 
-       'name': request.session['ldap_user'].first_name + ' ' + request.session['ldap_user'].last_name, 
-       'info': {'email' : request.session['ldap_user'].email}, 
+       'user_id' : request.session['ldap_user']['user_id'], 
+       'name': request.session['ldap_user']['name'], 
+       'info': {'email': request.session['ldap_user']['user_id']}, 
        'token': None 
     }
 
