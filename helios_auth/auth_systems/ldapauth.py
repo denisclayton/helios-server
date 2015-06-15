@@ -1,7 +1,11 @@
 """
+
 LDAP Authentication
 Author : shirlei@gmail.com
 Version: 1.0
+Requires libldap2-dev
+django-auth-ldap 1.2.6
+
 """
 
 from django import forms
@@ -85,7 +89,3 @@ def check_constraint(constraint, user_info):
     for eligibility
     """
     pass
-
-            
-            
-             
