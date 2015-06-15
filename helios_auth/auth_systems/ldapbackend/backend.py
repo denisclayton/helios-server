@@ -9,7 +9,8 @@ class CustomLDAPBackend(LDAPBackend):
     def authenticate(self, username, password):
         """
         Some ldap servers allow anonymous search but naturally return just a set
-        of user attributes. So, here we re-perform search and populate user methods.
+        of user attributes. So, here we re-perform search after user is authenticated,
+        in order to populate other user attributes.
         For now, just in cases where AUTH_LDAP_BIND_PASSWORD is empty
         """
         user =  super(CustomLDAPBackend, self).authenticate(username, password)
