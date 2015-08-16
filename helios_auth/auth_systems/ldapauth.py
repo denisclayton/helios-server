@@ -5,6 +5,30 @@ Version: 1.0
 Requires libldap2-dev
 django-auth-ldap 1.2.6
 
+LDAP authentication relies on django-auth-ldap (http://pythonhosted.org/django-auth-ldap/),
+which considers that “Authenticating against an external source is swell, but Django’s
+auth module is tightly bound to a user model. When a user logs in, we have to create a model
+object to represent them in the database.”
+
+Helios, originally, does not rely on default django user model. Discussion about that can be
+found in:
+https://groups.google.com/forum/#!topic/helios-voting/nRHFAbAHTNA
+
+That considered, using a django plugin for ldap authentication, in order to not reinvent the
+wheel seems ok, since it does not alter anything on original helios user model, it is just
+for authentication purposes.
+
+However, two installed_apps that are added when you first create a django project, which were
+commented out in helios settings, need to be made available now:
+
+django.contrib.auth
+django.contrib.contenttypes'
+
+This will enable the native django authentication support on what django-auth-ldap is build upon.
+
+Further reference on
+https://docs.djangoproject.com/en/1.8/topics/auth/
+
 """
 
 from django import forms
