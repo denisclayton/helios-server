@@ -1,5 +1,4 @@
 """
-
 LDAP Authentication
 Author : shirlei@gmail.com
 Version: 1.0
@@ -21,6 +20,9 @@ from helios_auth.auth_systems.ldapbackend import backend
 
 # some parameters to indicate that status updating is possible
 STATUS_UPDATES = False
+
+
+LOGIN_MESSAGE = "Log in with my LDAP Account"
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=250)
