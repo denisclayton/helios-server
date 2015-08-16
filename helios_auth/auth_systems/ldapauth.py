@@ -13,10 +13,8 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 
 
-from django_auth_ldap.backend import LDAPBackend
-
-
 from helios_auth.auth_systems.ldapbackend import backend
+
 
 # some parameters to indicate that status updating is possible
 STATUS_UPDATES = False
