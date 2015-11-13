@@ -646,6 +646,7 @@ class ElectionLog(models.Model):
   FROZEN = "frozen"
   VOTER_FILE_ADDED = "voter file added"
   DECRYPTIONS_COMBINED = "decryptions combined"
+  PREVIOUS_VOTERS_REMOVED = "previous voters were removed to process a new voter file"
 
   election = models.ForeignKey(Election)
   log = models.CharField(max_length=500)
@@ -731,6 +732,9 @@ class VoterFile(models.Model):
       yield return_dict
     
   def process(self):
+    # DENIS - ultimo CSV sobrescreve eleitores cadastrados previamente, chamada abaixo exclui estes eleitores.
+    amount_voters_deleted = Voter.unregister_voters_in_election(self.election)
+
     self.processing_started_at = datetime.datetime.utcnow()
     self.save()
 
@@ -813,6 +817,23 @@ class Voter(HeliosModel):
   def __unicode__(self):
     return self.user.name
 
+  # DENIS - ultimo upload sobrescreve demais. Registros em helios_voter devem ser apagados de forma a constar somente os usuarios indicados no CSV carregado por
+  # ultimo. Atualizar helios_electionlog.
+  # TODO  - na view acrescentar informacao: apagado(s) X eleitor(es), antes de informar novo processamento de CSV.
+  @classmethod
+  @transaction.commit_on_success
+  def unregister_voters_in_election(cls, election):
+    amount_voters = 0
+    if not election:
+      raise Exception("Eleicao nula, nao posso apagar eleitores do(s) arquivo(s) CSV previo(s) se existir(em)!")
+    else:
+      amount_voters = cls.objects.filter(election_id = election.id).count()
+      voters_to_del = cls.objects.filter(election_id = election.id)
+      voters_to_del.delete()
+      election.append_log(ElectionLog.PREVIOUS_VOTERS_REMOVED)
+
+    return amount_voters
+    
   @classmethod
   @transaction.commit_on_success
   def register_user_in_election(cls, user, election):
@@ -949,8 +970,13 @@ class Voter(HeliosModel):
   def generate_password(self, length=10):
     if self.voter_password:
       raise Exception(_('password already exists'))
-    
-    self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ23456789')
+
+    # CSV_VOTERS_PASSWORD_SIMPLIFIED means password generated with 6 letters and just in small case.
+    if settings.CSV_VOTERS_PASSWORD_SIMPLIFIED:
+      length = 06
+      self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyz')
+    else:
+      self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ23456789')
 
   # metadata for the election
   @property

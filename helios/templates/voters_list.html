@@ -27,14 +27,15 @@
 	<div class="panel-body" style="padding:35px;"> 
 	<form id="eligibility-form" method="post" role="form" class="form-horizontal" action="{% url "helios.views.voters_eligibility" election.uuid %}">
 		<input type="hidden" name="csrf_token" value="{{csrf_token}}" />
-		<div class="form-group">
-			<input id="logged_type" type="radio" name="eligibility" value="openreg" {% if election.openreg and not election.eligibility or not user.institutionuserprofile_set.get.institution.upload_voters %}CHECKED{% endif %} /> {% trans "anyone can vote" %}
-		</div>
+<div class="form-group">
+                        <input id="logged_type" type="radio" name="eligibility" value="openreg" {% if election.openreg and not election.eligibility or not user.institutionuserprofile_set.get.institution.upload_voters %}CHECKED{% endif %} /> {% trans "anyone can vote" %}
+                </div>
 		{% if settings.AUTH_DEFAULT_AUTH_SYSTEM == 'shibboleth' and user.institutionuserprofile_set.get.institution.upload_voters or settings.AUTH_DEFAULT_AUTH_SYSTEM != 'shibboleth' and upload_p %}
 		<div class="form-group">
 			<input id="csv_type" type="radio" name="eligibility" value="closedreg" {% if not election.openreg %}CHECKED{% endif %} /> {% trans "only voters listed explicitly below can vote" %} <i title="{% trans "Do not forget to upload voters file, using the bulk upload voters button bellow." %}" class="glyphicon glyphicon-info-sign"></i>
 			{% if upload_p %}
-				<a id="upload_voters" class="btn btn-primary btn-xs hidden" href="{% url "helios.views.voters_upload" election_uuid=election.uuid %}">{% trans "bulk upload voters" %}</a>
+                                <br/><br/><p>
+				<a id="upload_voters" class="btn btn-primary btn-xs hidden" href="{% url "helios.views.voters_upload" election_uuid=election.uuid %}">{% trans "bulk upload voters" %}</a></p>
 			{% endif %}
 		</div>
 		{% endif %}
@@ -81,9 +82,11 @@
 				</div>
 			{% endif %}
 		{% endif %}
-		<div class="form-group">
+
+		   <br/>
+		   <div class="form-group">
 			<button id="update_voter_reg" class="btn btn-primary pull-right">{% trans "update" %}</button>
-		</div>
+		   </div>
 	</form>
 	</div>	<!-- div panel body -->
 </div> <!-- div panel primary -->

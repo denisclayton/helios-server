@@ -19,18 +19,22 @@ TEMPLATE_DEBUG = DEBUG
 #If the Host header (or X-Forwarded-Host if USE_X_FORWARDED_HOST is enabled) does not match any value in this list, the django.http.HttpRequest.get_host() method will raise SuspiciousOperation.
 #When DEBUG is True or when running tests, host validation is disabled; any host will be accepted. Thus it’s usually only necessary to set it in production.
 #This validation only applies via get_host(); if your code accesses the Host header directly from request.META you are bypassing this security protection.
-#More info: https://docs.djangoproject.com/en/1.7/ref/settings/#allowed-hosts
+#More info: http://docs.djangoproject.com/en/1.7/ref/settings/#allowed-hosts
 
-ALLOWED_HOSTS = ['sp-helios.cafeexpresso.rnp.br'] # set a value for production environment, alongside with debug set to false
+# sp-helios.cafeexpresso.rnp.br
+ALLOWED_HOSTS = ['instalacao22.ccuec.unicamp.br'] # set a value for production environment, alongside with debug set to false
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = get_from_env('SECRET_KEY', 'replaceme')
+# There are some kinds of elections which enforce security aspects through the use of kioskes computers. In this case password generation was simplified:
+# 6 digits instead of 10, just letters in small case to prevent each voter delaying to cast his/her ballot
+CSV_VOTERS_PASSWORD_SIMPLIFIED = True
+
 ROOT_URLCONF = 'urls'
 
 ROOT_PATH = os.path.dirname(__file__)
 
 ADMINS = (
-   ('Shirlei Chaves', 'shirlei@gmail.com'),
+    ('DENIS RAMOS', 'clayton@ccuec.unicamp.br'),
+    ('root', 'DENIS CLAYTON')
 )
 
 MANAGERS = ADMINS
@@ -40,7 +44,7 @@ MASTER_HELIOS = (get_from_env('MASTER_HELIOS', '0') == '1')
 
 # show ability to log in? (for example, if the site is mostly used by voters)
 # if turned off, the admin will need to know to go to /auth/login manually
-SHOW_LOGIN_OPTIONS = (get_from_env('SHOW_LOGIN_OPTIONS', '1') == '1')
+SHOW_LOGIN_OPTIONS = (get_from_env('SHOW_LOGIN_OPTIONS', '0') == '1')
 
 # sometimes, when the site is not that social, it's not helpful
 # to display who created the election
@@ -49,7 +53,11 @@ SHOW_USER_INFO = (get_from_env('SHOW_USER_INFO', '1') == '1')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'helios'
+	'HOST': 'localhost',
+        'NAME': 'helios',
+	'USER': 'helios',
+        'PORT': '65000',
+        'PASSWORD': '69&#OsLd',
     }
 }
 
@@ -61,6 +69,9 @@ if get_from_env('DATABASE_URL', None):
     DATABASES['default'] =  dj_database_url.config()
     DATABASES['default']['ENGINE'] = 'dbpool.db.backends.postgresql_psycopg2'
     DATABASES['default']['OPTIONS'] = {'MAX_CONNS': 1}
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = get_from_env('SECRET_KEY', '0=_*!^fns(82-=3$bl-a6_%h$pix!$ro(4ya(ag=h(^roug+0y')
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -188,9 +199,8 @@ VOTER_UPLOAD_REL_PATH = "voters/%Y/%m/%d"
 
 
 # Change your email settings
-DEFAULT_FROM_EMAIL = get_from_env('DEFAULT_FROM_EMAIL', 'helios.ifsc@gmail.com')
-#DEFAULT_FROM_NAME = get_from_env('DEFAULT_FROM_NAME', _('IFSC E-Voting System'))
-DEFAULT_FROM_NAME = get_from_env('DEFAULT_FROM_NAME', 'Sistema de Votação do IFSC')
+DEFAULT_FROM_EMAIL = get_from_env('DEFAULT_FROM_EMAIL', 'ctmq@ccuec.unicamp.br')
+DEFAULT_FROM_NAME = get_from_env('DEFAULT_FROM_NAME', _('UNICAMP Sistema e-Voto'))
 SERVER_EMAIL = '%s <%s>' % (DEFAULT_FROM_NAME, DEFAULT_FROM_EMAIL)
 
 LOGIN_URL = '/auth/'
@@ -198,21 +208,20 @@ LOGOUT_ON_CONFIRMATION = True
 
 # The two hosts are here so the main site can be over plain HTTP
 # while the voting URLs are served over SSL.
-URL_HOST = get_from_env("URL_HOST", "http://localhost:8000").rstrip("/")
+URL_HOST = get_from_env("URL_HOST", "https://instalacao22.ccuec.unicamp.br")
 
 # IMPORTANT: you should not change this setting once you've created
 # elections, as your elections' cast_url will then be incorrect.
-# SECURE_URL_HOST = "https://localhost:8443"
-SECURE_URL_HOST = get_from_env("SECURE_URL_HOST", URL_HOST).rstrip("/")
+SECURE_URL_HOST = get_from_env("SECURE_URL_HOST", "https://instalacao22.ccuec.unicamp.br")
 
 # this additional host is used to iframe-isolate the social buttons,
 # which usually involve hooking in remote JavaScript, which could be
 # a security issue. Plus, if there's a loading issue, it blocks the whole
 # page. Not cool.
-SOCIALBUTTONS_URL_HOST= get_from_env("SOCIALBUTTONS_URL_HOST", SECURE_URL_HOST).rstrip("/")
+SOCIALBUTTONS_URL_HOST= get_from_env("SOCIALBUTTONS_URL_HOST", "https://instalacao22.ccuec.unicamp.br")
 
 # election stuff
-SITE_TITLE = get_from_env('SITE_TITLE', _('IFSC E-Voting System'))
+SITE_TITLE = get_from_env('SITE_TITLE', _('UNICAMP :: Sistema e-Voto'))
 MAIN_LOGO_URL = get_from_env('MAIN_LOGO_URL', '/static/logo.png')
 ALLOW_ELECTION_INFO_URL = (get_from_env('ALLOW_ELECTION_INFO_URL', '0') == '1')
 
@@ -220,9 +229,9 @@ ALLOW_ELECTION_INFO_URL = (get_from_env('ALLOW_ELECTION_INFO_URL', '0') == '1')
 FOOTER_LINKS = json.loads(get_from_env('FOOTER_LINKS', '[]'))
 FOOTER_LOGO_URL = get_from_env('FOOTER_LOGO_URL', None)
 
-WELCOME_MESSAGE = get_from_env('WELCOME_MESSAGE', _('Welcome to IFSC E-Voting System'))
+WELCOME_MESSAGE = get_from_env('WELCOME_MESSAGE', _('Bem-vindo ao Sistema e-Voto Unicamp'))
 
-HELP_EMAIL_ADDRESS = get_from_env('HELP_EMAIL_ADDRESS', 'shirlei@gmail.com')
+HELP_EMAIL_ADDRESS = get_from_env('HELP_EMAIL_ADDRESS', 'ctmq@ccuec.unicamp.br')
 
 AUTH_TEMPLATE_BASE = "server_ui/templates/base.html"
 HELIOS_TEMPLATE_BASE = "server_ui/templates/base.html"
@@ -235,8 +244,8 @@ HELIOS_PRIVATE_DEFAULT = False
 
 # authentication systems enabled
 #AUTH_ENABLED_AUTH_SYSTEMS = ['password','facebook','twitter', 'google', 'yahoo']
-AUTH_ENABLED_AUTH_SYSTEMS = get_from_env('AUTH_ENABLED_AUTH_SYSTEMS', 'shibboleth').split(",")
-AUTH_DEFAULT_AUTH_SYSTEM = get_from_env('AUTH_DEFAULT_AUTH_SYSTEM', None)
+AUTH_ENABLED_AUTH_SYSTEMS = get_from_env('AUTH_ENABLED_AUTH_SYSTEMS', 'ldap').split(",")
+AUTH_DEFAULT_AUTH_SYSTEM = get_from_env('AUTH_DEFAULT_AUTH_SYSTEM', 'ldap')
 
 # google
 GOOGLE_CLIENT_ID = get_from_env('GOOGLE_CLIENT_ID', '')
@@ -267,11 +276,18 @@ CAS_ELIGIBILITY_URL = get_from_env('CAS_ELIGIBILITY_URL', "")
 CAS_ELIGIBILITY_REALM = get_from_env('CAS_ELIGIBILITY_REALM', "")
 
 # email server
-EMAIL_HOST = get_from_env('EMAIL_HOST', 'localhost')
-EMAIL_PORT = int(get_from_env('EMAIL_PORT', "2525"))
-EMAIL_HOST_USER = get_from_env('EMAIL_HOST_USER', '')
-EMAIL_HOST_PASSWORD = get_from_env('EMAIL_HOST_PASSWORD', '')
-EMAIL_USE_TLS = (get_from_env('EMAIL_USE_TLS', '0') == '1')
+EMAIL_HOST = get_from_env('EMAIL_HOST', 'smtp.ccuec.unicamp.br') # localhost
+EMAIL_PORT = int(get_from_env('EMAIL_PORT', "587")) # 587 com TLS # 25 sem TLS (autenticacao)
+EMAIL_HOST_USER = get_from_env('EMAIL_HOST_USER', 'ctmq@unicamp.br')
+EMAIL_HOST_PASSWORD = get_from_env('EMAIL_HOST_PASSWORD', '69&#OsLd')
+
+# print "---[[ EMAIL_HOST_PASSWORD = %s]]---" % (os.environ["EMAIL_HOST_PASSWORD"])
+
+# EMAIL_USE_TLS = (get_from_env('EMAIL_USE_TLS', '0') == '1')
+EMAIL_USE_TLS = True
+
+# clayton - teste
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # to use AWS Simple Email Service
 # in which case environment should contain
@@ -301,12 +317,16 @@ CELERY_TASK_RESULT_EXPIRES = 5184000 # 60 days
 TEST_RUNNER = 'djcelery.contrib.test_runner.CeleryTestSuiteRunner'
 # this effectively does CELERY_ALWAYS_EAGER = True
 
-# see configuration example at https://pythonhosted.org/django-auth-ldap/example.html
-AUTH_LDAP_SERVER_URI = "ldap://ldap.forumsys.com" # replace by your Ldap URI
-AUTH_LDAP_BIND_DN = "cn=read-only-admin,dc=example,dc=com"
-AUTH_LDAP_BIND_PASSWORD = "password"
-AUTH_LDAP_USER_SEARCH = LDAPSearch("dc=example,dc=com",
-    ldap.SCOPE_SUBTREE, "(cn=%(user)s)"
+# see configuration example in:
+# http://pythonhosted.org/django-auth-ldap/example.html
+
+AUTH_LDAP_SERVER_URI = 'ldap://ldap.ccuec.unicamp.br'
+
+AUTH_LDAP_BIND_DN = ""
+AUTH_LDAP_BIND_PASSWORD = ""
+
+AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=people,dc=unicamp,dc=br",
+    ldap.SCOPE_SUBTREE, "(uid=%(user)s)"
 )
 
 AUTH_LDAP_USER_ATTR_MAP = {
@@ -324,6 +344,11 @@ AUTH_LDAP_CACHE_GROUPS = True
 AUTH_LDAP_GROUP_CACHE_TIMEOUT = 3600
 
 AUTH_LDAP_ALWAYS_UPDATE_USER = False
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'django_auth_ldap.backend.LDAPBackend',
+)
 
 # Shibboleth auth settings
 SHIBBOLETH_ATTRIBUTE_MAP = { 

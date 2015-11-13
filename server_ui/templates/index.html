@@ -31,12 +31,12 @@
   </p>
   {% endblocktrans %}
   {% if create_p %}
-  <a class="button" href="{% url "helios.views.election_new" %}">{% trans "create an election" %}</a>
+  <a class="btn btn-success btn-lg" href="{% url helios.views.election_new %}">{% trans "create an election" %}</a>
   {% endif %}
     {% else %}
-    <p style="font-size: 1.4em;">
+    <p style="font-size: 1.4em;"><strong>
       {{settings.WELCOME_MESSAGE|safe}}
-    </p>
+    </strong></p>
     
     {% if elections|length %}
 

@@ -52,7 +52,10 @@ def process_csv_file(election, f):
         name = voter[2]
     
       # create the user
-      user = User.update_or_create(user_type='password', user_id=voter_id, info = {'password': helios_utils.random_string(10), 'email': email, 'name': name})
+      if settings.CSV_VOTERS_PASSWORD_SIMPLIFIED:
+        user = User.update_or_create(user_type='password', user_id=voter_id, info = {'password': helios_utils.random_string(06), 'email': email, 'name': name})
+      else:
+        user = User.update_or_create(user_type='password', user_id=voter_id, info = {'password': helios_utils.random_string(10), 'email': email, 'name': name})
       user.save()
     
       # does voter for this user already exist

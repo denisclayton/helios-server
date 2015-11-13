@@ -1,0 +1,8 @@
+- Customizacoes:
+
+1. Simplificacao da senha gerada para votacao ser acessivel a pessoas com pouca familiaridade com informatica e evitar fila na Consulta para Reitor.
+   Restricoes aplicadas: tamanho = 6 digitos e apenas letras em minusculo
+
+2. Adequacao funcionalidade re-carregar colegio eleitoral com arquivo CSV.
+   Agora, o ultimo CSV sobrescreve eleitores cadastrados previamente. Implementada exclusao de eleitores correspondentes a arquivo(s) CSV carregado(s) previamente.
+   Exclusao feita na helios_voter. A helios_voterfile mantem historico de arquivos CSVs carregados.

@@ -19,13 +19,14 @@
 
 {% trans "You are logged in as" %} <u>{{voter.user.pretty_name}}</u><br /><br />
 
-    <button class="btn btn-primary" type="submit" class="large">{% trans "CAST this ballot" %}</button>
-    <span style="font-size:0.8em;"><br />{% blocktrans %}You can cast as many ballots as you want.<br />Only the last one counts.{% endblocktrans %}</span>
+    <!-- btn-primary e 0.8em -->
+    <button class="btn btn-success" type="submit" class="large">{% trans "CAST this ballot" %}</button>
+    <span style="font-size:1.1em;"><br /><u>{% blocktrans %}You can cast as many ballots as you want.<br />Only the last one counts.{% endblocktrans %}</u></span>
 </form>
 
-<p>
-    <button class="btn btn-danger" onclick="document.location='./view';">{% trans "cancel" %}</button><br />
-    <span style="font-size:0.8em;">{% blocktrans %}If you cancel now, your ballot will <em>NOT</em> be recorded.<br />
+<br><p>
+    <button class="btn btn-danger" onclick="document.location='./view';" class="large">{% trans "cancel" %}</button><br />
+    <span style="font-size:1.1em;">{% blocktrans %}If you cancel now, your ballot will <em>NOT</em> be recorded.<br />
     You can start the voting process over again, of course.{% endblocktrans %}</span>
 </p>
 

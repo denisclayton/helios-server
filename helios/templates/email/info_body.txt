@@ -5,4 +5,4 @@ Caro (a) {{voter.name}},
 Você pode acessar a eleição através do link {{election_vote_url}}
 
 --
-Sistema de Votação Online do IFSC
+Sistema e-Voto: Voto Eletrônico da Unicamp

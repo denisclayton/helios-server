@@ -30,8 +30,8 @@
 </head>
 <body>
 <div id="wrapper">
-<span style="float:right; padding: 7px 15px 5px 10px;">[<a style="color:#000;" href="javascript:BOOTH.exit();">sair</a>]</span>
-<div id="banner">Cabine de Votação</div>
+<span style="float:right; padding: 7px 15px 5px 10px; color:#FFFFFF;"><strong>[<a style="color:#FFFFFF;" href="javascript:BOOTH.exit();">sair</a>]</strong></span>
+<div id="banner"><strong style="color:#FFFFFF;">Cabine de Votação</strong></div>
 <div id="content">
 
 <div id="header">
@@ -500,7 +500,7 @@ BOOTH.wait_for_ciphertexts = function() {
 
     if (BOOTH.total_cycles_waited > 250) {
       //alert('there appears to be a problem with the encryption process.\nPlease email help@heliosvoting.org and indicate that your encryption process froze at ' + percentage_done + '%');
-      alert('parece que houve um problema com o processo de cifragem.\nPor favor, envie um email para suporte.reitoria@ifsc.edu.br e informe que seu processo de cifragem travou em ' + percentage_done + '%');
+      alert('parece que houve um problema com o processo de cifragem.\nPor favor, envie um email para ctmq@ccuec.unicamp.br e informe que seu processo de cifragem travou em ' + percentage_done + '%');
       return;
     }
 
@@ -601,7 +601,7 @@ BOOTH.cast_ballot = function() {
 
 BOOTH.show_receipt = function() {
     //UTILS.open_window_with_content("Your smart ballot tracker for " + BOOTH.election.name + ": " + BOOTH.encrypted_ballot_hash);
-    UTILS.open_window_with_content("Seu rastreador de cédula para " + BOOTH.election.name + ": " + BOOTH.encrypted_ballot_hash);
+    UTILS.open_window_with_content("Seu comprovante de voto para " + BOOTH.election.name + ": " + BOOTH.encrypted_ballot_hash);
 };
 
 BOOTH.do_done = function() {

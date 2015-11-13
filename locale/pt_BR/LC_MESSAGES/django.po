@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: helios-ifsc\n"
+"Project-Id-Version: helios-unicamp\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-10-14 16:16-0300\n"
 "PO-Revision-Date: 2015-10-14 16:16-0300\n"
@@ -27,12 +27,12 @@ msgid "Brazilian Portuguese"
 msgstr "Português Brasileiro"
 
 #: settings.py:215
-msgid "IFSC E-Voting System"
-msgstr "Sistema de Votação Online do IFSC"
+msgid "Unicamp Sistema e-voto"
+msgstr "Sistema de Votação Online da Unicamp"
 
 #: settings.py:223
-msgid "Welcome to IFSC E-Voting System"
-msgstr "Bem Vindo ao Sistema de Votação Online do IFSC"
+msgid "Welcome to Unicamp Sistema e-voto"
+msgstr "Bem Vindo ao Sistema de Votação Online da Unicamp"
 
 #: helios/forms.py:14
 msgid "Short name"
@@ -173,12 +173,12 @@ msgstr "Eleição"
 
 #: helios/models.py:55
 msgid "Referendum"
-msgstr "Referendo"
+msgstr "Enquete"
 
 #: helios/models.py:311
 msgid "Anyone can vote."
 msgstr ""
-"Qualquer eleitor que tenha um nome de usuário e senha nos sistema do IFSC."
+"Qualquer eleitor que tenha um nome de usuário e senha no LDAP da Unicamp."
 
 #: helios/models.py:346
 msgid "add questions to the ballot"
@@ -303,7 +303,7 @@ msgstr ""
 #: helios/views.py:678
 #, python-format
 msgid "I voted in %(url)s - my smart tracker is %(vote_hash)s.. #heliosvoting"
-msgstr "Eu votei em %(url)s - meu rastreador é %(vote_hash)s.. #heliosvoting"
+msgstr "Eu votei em %(url)s - meu comprovante é %(vote_hash)s.. #heliosvoting"
 
 #: helios/views.py:976
 msgid "registration is closed for this election"
@@ -343,7 +343,7 @@ msgstr "Você está conectado como "
 
 #: helios/templates/_castconfirm_docast.html:22
 msgid "CAST this ballot"
-msgstr "DEPOSITAR cédula na urna"
+msgstr ">> DEPOSITAR cédula na urna"
 
 #: helios/templates/_castconfirm_docast.html:23
 msgid ""
@@ -357,7 +357,7 @@ msgstr ""
 #: helios/templates/election_edit.html:8 helios/templates/new_trustee.html:4
 #: helios/templates/release_result.html:7
 msgid "cancel"
-msgstr "cancelar"
+msgstr "<< Cancelar"
 
 #: helios/templates/_castconfirm_docast.html:28
 msgid ""
@@ -393,14 +393,13 @@ msgstr "Usuário ou senha incorretos, por favor, tente novamente."
 
 #: helios/templates/_castconfirm_password.html:26
 msgid ""
-"You may cast as many ballots as you wish:<br />only the last one counts."
+"You may cast as many ballots as you wish: only the last one counts."
 msgstr ""
-"Você pode depositar quantos votos desejar, porém somente o último será "
-"contabilizado."
+"Você pode depositar quantos votos desejar, somente o último será contabilizado."
 
 #: helios/templates/_castconfirm_password.html:29
 msgid "Vote"
-msgstr "Votar"
+msgstr ">> Depositar Voto"
 
 #: helios/templates/_castconfirm_password.html:32
 #: helios_auth/templates/login_box.html:11
@@ -409,7 +408,7 @@ msgstr "Votar"
 #: helios_auth/templates/password/login.html:23
 #: server_ui/templates/navbar.html:23
 msgid "Login"
-msgstr "Conectar"
+msgstr "Autenticar-se"
 
 #: helios/templates/cast_done.html:3
 #: helios/templates/election_cast_confirm.html:4
@@ -429,13 +428,13 @@ msgstr ""
 "\n"
 "    Você receberá em breve um e-mail confirmando que seu voto foi depositado "
 "corretamente. Assim que receber este e-mail você poderá acessar a página "
-"pública da eleição, através do link abaixo, e verificar que o número "
-"rastreador da sua célula aparece na listagem de cédulas depositadas na urna. "
+"pública da eleição, através do link abaixo, e verificar que o comprovante "
+"do seu voto aparece na listagem de cédulas depositadas na urna. "
 "Essa é a sua garantiria que seu voto será contabilizado corretamente.\n"
 
 #: helios/templates/cast_done.html:15
 msgid "Your smart ballot tracker is:"
-msgstr "O número do rastreador da sua cédula é:"
+msgstr "O número do comprovante da sua cédula é:"
 
 #: helios/templates/cast_done.html:20
 msgid "You can use it to verify that your vote has been cast, "
@@ -449,8 +448,7 @@ msgstr "clicando aqui"
 
 #: helios/templates/cast_done.html:27
 msgid "For your safety, we have logged you out."
-msgstr ""
-"Você foi desconectado. Por favor, para sua segurança, feche seu navegador."
+msgstr "Para sua segurança, você foi desconectado."
 
 #: helios/templates/cast_done.html:33
 msgid "return to election info"
@@ -519,7 +517,7 @@ msgid ""
 "choice.\n"
 msgstr ""
 "\n"
-"Quando você prepara uma cédula com o Helios, recebe um rastreador para "
+"Quando você prepara uma cédula com o Helios, recebe um comprovante para "
 "posteriormente verificar se sua cédula foi contabilizada. Antes de resolver "
 "depositar a cédula na urna, você pode solicitar ao sistema que abra a cédula "
 "cifrada e verifique se a mesma foi cifrada corretamente (se realmente contém "
@@ -527,7 +525,7 @@ msgstr ""
 "cédulas auditadas, para que qualquer um possa verificar (sua identidade não "
 "será incluída). Você pode fazer isso quantas vezes quiser. \n"
 " Escolhendo ou não postar essa cédula auditada, você deve voltar para a "
-"cédula de votação e a cifrar novamente, obtendo então um novo rastreador. "
+"cédula de votação e a cifrar novamente, obtendo então um novo comprovante. "
 "Isso ajuda a reduzir as chances de que alguém possa coagi-lo a votar de modo "
 "diverso à sua real escolha.\n"
 
@@ -617,7 +615,7 @@ msgstr "Pseudônimo"
 #: helios/templates/election_bboard.html:38
 #: helios/templates/voters_list.html:159
 msgid "Smart Ballot Tracker"
-msgstr "Rastreador da Cédula"
+msgstr "Comprovante de Voto"
 
 #: helios/templates/election_build.html:4
 #: helios/templates/election_questions.html:6
@@ -638,7 +636,7 @@ msgid ""
 msgstr ""
 "\n"
 "  A sua cédula cifrada <b><u>ainda não foi depositada</u></b> na urna.\n"
-"O número de rastreamento da sua cédula é:\n"
+"O número de comprovante da sua cédula é:\n"
 " "
 
 #: helios/templates/election_cast_confirm.html:51
@@ -677,7 +675,7 @@ msgid ""
 msgstr ""
 "\n"
 "  Para que sua cédula seja realmente depositada na urna, você deve se "
-"conectar com seu usuário e senha, para que possamos verificar se você é um "
+"autenticar com seu usuário e senha, para que possamos verificar se você é um "
 "eleitor válido nessa eleição.<br /><br />\n"
 "  "
 
@@ -1138,12 +1136,12 @@ msgstr "Quem pode votar nessa eleição:"
 #: helios/templates/voters_list.html:101
 msgid "Any user with credentials"
 msgstr ""
-"Qualquer eleitor que tenha um nome de usuário e senha nos sistema do IFSC"
+"Qualquer eleitor que tenha um nome de usuário e senha no LDAP da Unicamp"
 
 #: helios/templates/election_view.html:71
 msgid "Anyone can vote in this election."
 msgstr ""
-"Qualquer eleitor que tenha um nome de usuário e senha nos sistemas do IFSC."
+"Qualquer eleitor que tenha um nome de usuário e senha no LDAP da Unicamp."
 
 #: helios/templates/election_view.html:92
 msgid "questions"
@@ -1427,7 +1425,7 @@ msgstr ""
 "desencriptação automaticamente.<br />\n"
 "  Se você cadastrar apuradores adicionais, você pode remover o Helios como "
 "apurador, clicando no botão de excluir da opção \"Sistema de Votação Online "
-"do IFSC\" na listagem de apuradores abaixo.<br />\n"
+"da Unicamp\" na listagem de apuradores abaixo.<br />\n"
 
 #: helios/templates/list_trustees.html:32
 msgid "add a trustee"
@@ -1506,7 +1504,7 @@ msgstr ""
 "\n"
 "Parece que o seu navegador não aceita cookies ou está configurado para "
 "bloqueá-los nesse site. O Helios precisa configurar um cookie de sessão para "
-"poder salvar o seu voto, deixar você conectar, etc. Habilite o uso de "
+"poder salvar o seu voto, deixar você autenticar, etc. Habilite o uso de "
 "cookies e então <a href=\"%(retest_url)s\">prossiga para preparar sua "
 "cédula</a>\n"
 
@@ -1522,7 +1520,7 @@ msgstr ""
 
 #: helios/templates/password_voter_login.html:3
 msgid "Log In to View Election"
-msgstr "Conectar para Visualizar Eleições"
+msgstr "Autentique para Visualizar Eleições"
 
 #: helios/templates/password_voter_login.html:5
 msgid "Private Election - Please Log In"
@@ -1972,11 +1970,11 @@ msgstr ""
 
 #: helios/templates/voters_list.html:3
 msgid "Ballot Tracking Center for"
-msgstr "Centro de Rastreamento de Cédulas para"
+msgstr "Centro de Comprovantes de Votação para"
 
 #: helios/templates/voters_list.html:8
 msgid "Voters and Ballot Tracking Center"
-msgstr "Centro de Rastreamento de Cédulas e Eleitores"
+msgstr "Centro de Comprovantes de Votação"
 
 #: helios/templates/voters_list.html:16
 msgid ""
@@ -1993,11 +1991,11 @@ msgstr "Configure a lista com os eleitores desta eleição:"
 #: helios/templates/voters_list.html:31
 msgid "anyone can vote"
 msgstr ""
-"Qualquer eleitor que tenha um nome de usuário e senha nos sistemas do IFSC"
+"Qualquer eleitor que tenha um nome de usuário e senha no LDAP da Unicamp"
 
 #: helios/templates/voters_list.html:35
 msgid "only voters listed explicitly below can vote"
-msgstr "Somente eleitores contidos no arquivo a ser carregado (arquivo CSV)"
+msgstr "Somente eleitores contidos no arquivo a ser carregado (arquivo CSV - <b><u>Salve o arquivo com Codificação UTF-8</b></u>)"
 
 #: helios/templates/voters_list.html:35
 msgid ""
@@ -2009,7 +2007,7 @@ msgstr ""
 
 #: helios/templates/voters_list.html:37 helios/templates/voters_manage.html:11
 msgid "bulk upload voters"
-msgstr "carregar arquivo de eleitores"
+msgstr "Carregar arquivo de eleitores"
 
 #: helios/templates/voters_list.html:46
 msgid "only voters with the following attributes"
@@ -2054,7 +2052,7 @@ msgstr "apenas eleitores que são membros de"
 
 #: helios/templates/voters_list.html:85
 msgid "update"
-msgstr "atualizar"
+msgstr "Atualizar"
 
 #: helios/templates/voters_list.html:98
 msgid "Who can vote?"
@@ -2087,7 +2085,7 @@ msgstr "Total de votos depositados"
 
 #: helios/templates/voters_list.html:127
 msgid "no votes yet"
-msgstr "nenhum voto"
+msgstr "Nenhum voto depositado até o momento."
 
 #: helios/templates/voters_list.html:150
 #: heliosinstitution/templates/index.html:88
@@ -2113,7 +2111,7 @@ msgstr "nenhum eleitor."
 
 #: helios/templates/voters_list.html:213
 msgid "Prior Bulk Uploads:"
-msgstr "Arquivos de eleitores carregados anteriormente:"
+msgstr "Arquivos de eleitores carregados anteriormente (<u>apenas o último arquivo será considerado</u>):"
 
 #: helios/templates/voters_list.html:222
 msgid "bytes, at"
@@ -2218,7 +2216,7 @@ msgstr ""
 
 #: helios/templates/voters_upload_confirm.html:14
 msgid "Voter Login"
-msgstr "Conectar como Eleitor"
+msgstr "Autenticar-se como Eleitor"
 
 #: helios/templates/voters_upload_confirm.html:14
 msgid "Email Address"
@@ -2265,7 +2263,7 @@ msgstr ""
 
 #: helios_auth/templates/index.html:14
 msgid "logout"
-msgstr "desconectar"
+msgstr "sair"
 
 #: helios_auth/templates/perms_why.html:4
 msgid "Why we need your information"
@@ -3355,7 +3353,7 @@ msgstr "Houve um erro durante o processamento de sua requisição."
 #~ msgstr "foi computado e liberado"
 
 #~ msgid "Your smart ballot tracker in this election was:"
-#~ msgstr "O número do rastreador da sua cédula nesta eleição foi:"
+#~ msgstr "O número do comprovante de voto nesta eleição foi:"
 
 #~ msgid "If you believe this tracker to be in error, please contact us."
 #~ msgstr ""
@@ -3371,7 +3369,7 @@ msgstr "Houve um erro durante o processamento de sua requisição."
 #~ msgstr "Conecte-se com sua conta  {{voter.voter_type}}."
 
 #~ msgid "We have recorded your vote with smart tracker:"
-#~ msgstr "O seu voto foi registrado com o rastreador:"
+#~ msgstr "O seu voto foi registrado com o comprovante:"
 
 #~ msgid "You may re-vote if you wish: only your last vote counts."
 #~ msgstr ""

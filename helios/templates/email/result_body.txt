@@ -6,16 +6,16 @@ A apuração da eleição {{election.name}} foi realizada e liberada:
 
 {{custom_message|safe}}
 
-{% if voter.vote_hash %} O código de rastreamento de sua cédula nessa eleição foi:
+{% if voter.vote_hash %} O código do comprovante de sua cédula nessa eleição foi:
 
   {{voter.vote_hash}}
 
-Se você acha que esse rastreador está errado, por favor, entre em contato.
+Se você acha que esse código está errado, por favor, entre em contato.
 {% else %}
 Parece que você não votou nessa eleição. Se você acha que votou, por favor, entre em contato.
 
 {% endif %}
 
 --
-Sistema de Votação Online do IFSC
+Sistema e-Voto: Voto Eletrônico da Unicamp
 

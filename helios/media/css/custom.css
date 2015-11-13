@@ -1,15 +1,13 @@
 .top-bar {
-	background-color:#339933;	
-	background-image:url('/media/img/logo.png');
-	background-repeat:no-repeat;
-	min-height:80px;
+	background: #607D8B url('../img/h1Logomarca.gif') no-repeat left center;
+	min-height:98px;
 }
 #banner {
-	background:#4C9900;
+	background:#648392;
 }
 
 #footer {
-	background:#4C9900;
+	background:#648392;
 }
 #progress_div td.selected {
   background:#DFF0D8;
@@ -38,10 +36,11 @@ a:hover, a:focus {
 
 .panel-primary > .panel-heading {
     color: #fff;
-    background-color: #2ecc71;
-    border-color: #2ecc71;    
+    font-weight: bold;
+    background-color: #607D8B;
+    border-color: #607D8B;    
 }
 
 .panel-primary {
-    border-color: #2ecc71;    
+    border-color: #607D8B;    
 }

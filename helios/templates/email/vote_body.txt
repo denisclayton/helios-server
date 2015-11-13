@@ -8,7 +8,7 @@ Código de Identificação da Eleição: {{voter.election.hash}}
 Seu ID de eleitor: {{voter.voter_login_id}}
 Sua senha para essa eleição: {{voter.voter_password}}
 {% else %}
-Conecte-se com seu usuário e senha dos sistemas do IFSC.
+Conecte-se com seu usuário e senha dos sistemas da Unicamp.
 {% endifequal %}{% if voter.vote_hash %}
 O seu voto foi registrado com o seguinte código de identificação:
 
@@ -17,7 +17,7 @@ O seu voto foi registrado com o seguinte código de identificação:
 Você pode depositar quantos votos quiser, apenas o último voto será contabilizado.
 {% endif %}{% if election.use_voter_aliases %}
 
-Para proteger a sua privacidade, essa eleição está configurada para utilizar um pseudônimo de eleitor, assim seu login, nome ou email não será mostrado para o público em geral. Portanto, ao invés de seu nome, o centro de rastreamento de cédula vai listar apenas o seu pseudônimo.
+Para proteger a sua privacidade, essa eleição está configurada para utilizar um pseudônimo de eleitor, assim seu login, nome ou email não será mostrado para o público em geral. Portanto, ao invés de seu nome, o centro de comprovante de cédula vai listar apenas o seu pseudônimo.
 
 Seu pseudônimo de eleitor: {{voter.alias}}.
 IMPORTANTE: quando você for solicitado a informar seu login para votar, informe seu *ID de eleitor* ao invés de seu pseudônimo.
@@ -25,4 +25,4 @@ IMPORTANTE: quando você for solicitado a informar seu login para votar, informe
 {% endif %}
 
 --
-Sistema de Votação Online do IFSC
+Sistema e-Voto: Voto Eletrônico da Unicamp

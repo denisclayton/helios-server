@@ -125,8 +125,8 @@ def user_can_admin_election(user, election):
   if election and user != election.admin:
     return False
 
-  # can create election
-  if not user.admin_p:
+  # can create election - usuarios ldap tambem podem (DENIS)
+  if user.user_type != 'ldap' and not user.admin_p:
     return False
 
   return True
@@ -192,6 +192,10 @@ def trustee_check(func):
 def can_create_election(request):
   user = get_user(request)
   
+  # can create election - usuarios ldap tambem podem
+  if user and user.user_type == 'ldap':
+    return True
+
   if user and user.admin_p:
     return True
 
