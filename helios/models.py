@@ -971,7 +971,7 @@ class Voter(HeliosModel):
     if self.voter_password:
       raise Exception(_('password already exists'))
 
-    # CSV_VOTERS_PASSWORD_SIMPLIFIED means password generated with 6 letters and just in small case.
+    # CSV_VOTERS_PASSWORD_SIMPLIFIED means password generated with 6 letters and just in lowercase.
     if settings.CSV_VOTERS_PASSWORD_SIMPLIFIED:
       length = 06
       self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyz')

@@ -1,8 +1,19 @@
 - Customizacoes:
 
-1. Simplificacao da senha gerada para votacao ser acessivel a pessoas com pouca familiaridade com informatica e evitar fila na Consulta para Reitor.
+RL2
+
+1. Upgrade Django para versao 1.7.10 para incorporar patches de seguranca. Foi necessario subir a versao do django-auth-ldap para 1.2.7.
+   Teste do ciclo completo: desde a criacao da eleicao ate a apuracao. Testes realizados com autenticacao via LDAP ok.
+   Nao foram realizados testes do recurso Shibboleth.
+
+2. Traducao e-mails relacionados a tarefas (tasks): voter_file_process, election_compute_tally, tally_helios_decrypt.
+   Criada var settings.RODAPE_EMAILS_TASKS para facilitar composicao das mensagens.
+
+RL1
+
+1. Simplificacao da senha gerada para votacao ser acessivel a pessoas com pouca familiaridade com informatica e evitar fila na Consulta para Reitor (tipo de eleicao com uso de cabines eletronicas, eleitores se dirigem a pontos de votacao).
    Restricoes aplicadas: tamanho = 6 digitos e apenas letras em minusculo
 
 2. Adequacao funcionalidade re-carregar colegio eleitoral com arquivo CSV.
    Agora, o ultimo CSV sobrescreve eleitores cadastrados previamente. Implementada exclusao de eleitores correspondentes a arquivo(s) CSV carregado(s) previamente.
-   Exclusao feita na helios_voter. A helios_voterfile mantem historico de arquivos CSVs carregados.
+   Exclusao feita na helios_voter. A helios_voterfile mantem historico de arquivos CSVs carregados. Gravado log dessa operacao de exclusao na helios_electionlog.

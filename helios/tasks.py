@@ -1,3 +1,4 @@
+# -*- coding: iso-8859-1 -*-
 """
 Celery queued tasks for Helios
 
@@ -14,7 +15,7 @@ import signals
 import copy
 
 from django.conf import settings
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
 from django.utils.translation import activate
 
 
@@ -98,15 +99,15 @@ def election_compute_tally(election_id):
     election = Election.objects.get(id = election_id)
     election.compute_tally()
 
+    if not settings.RODAPE_EMAILS_TASKS:
+      str_rodape = " "
+    else:
+      str_rodape = settings.RODAPE_EMAILS_TASKS
+
     election_notify_admin.delay(election_id = election_id,
                                 subject = _("encrypted tally computed"),
-                                body = """
-The encrypted tally for election %s has been computed.
+                                body = _("The encrypted tally for election %s has been computed. %s") % (election.name, str_rodape))
 
---
-Helios
-""" % election.name)
-                                
     if election.has_helios_trustee():
         tally_helios_decrypt.delay(election_id = election.id)
 
@@ -115,32 +116,30 @@ def tally_helios_decrypt(election_id):
     activate(settings.LANGUAGE_CODE)
     election = Election.objects.get(id = election_id)
     election.helios_trustee_decrypt()
+
+    if not settings.RODAPE_EMAILS_TASKS:
+      str_rodape = " "
+    else:
+      str_rodape = settings.RODAPE_EMAILS_TASKS
+
     election_notify_admin.delay(election_id = election_id,
                                 subject = _('Helios Decrypt'),
-                                body = """
-Helios has decrypted its portion of the tally
-for election %s.
-
---
-Helios
-""" % election.name)
+                                body = _("Helios has decrypted its portion of the tally for election %s. %s") % (election.name, str_rodape))
 
 @task()
 def voter_file_process(voter_file_id):
     activate(settings.LANGUAGE_CODE)
     voter_file = VoterFile.objects.get(id = voter_file_id)
     voter_file.process()
+
+    if not settings.RODAPE_EMAILS_TASKS:
+      str_rodape = " "
+    else:
+      str_rodape = settings.RODAPE_EMAILS_TASKS
+
     election_notify_admin.delay(election_id = voter_file.election.id, 
                                 subject = _('voter file processed'),
-                                body = """
-Your voter file upload for election %s
-has been processed.
-
-%s voters have been created.
-
---
-Helios
-""" % (voter_file.election.name, voter_file.num_voters))
+                                body = _("Your voter file upload for election %s has been processed. %s voters have been created. %s") % (voter_file.election.name, voter_file.num_voters, str_rodape))
 
 @task()
 def election_notify_admin(election_id, subject, body):

@@ -22,7 +22,7 @@ TEMPLATE_DEBUG = DEBUG
 #More info: http://docs.djangoproject.com/en/1.7/ref/settings/#allowed-hosts
 
 # sp-helios.cafeexpresso.rnp.br
-ALLOWED_HOSTS = ['my.server.edu'] # set a value for production environment, alongside with debug set to false
+ALLOWED_HOSTS = ['instalacao22.ccuec.unicamp.br'] # set a value for production environment, alongside with debug set to false
 
 # There are some kinds of elections which enforce security aspects through the use of kioskes computers. In this case password generation was simplified:
 # 6 digits instead of 10, just letters in small case to prevent each voter delaying to cast his/her ballot
@@ -33,7 +33,8 @@ ROOT_URLCONF = 'urls'
 ROOT_PATH = os.path.dirname(__file__)
 
 ADMINS = (
-    ('root', 'admin')
+    ('DENIS RAMOS', 'clayton@ccuec.unicamp.br'),
+    ('root', 'DENIS CLAYTON')
 )
 
 MANAGERS = ADMINS
@@ -53,6 +54,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 	'HOST': 'localhost',
+        'NAME': 'helios',
+	'USER': 'helios',
+        'PORT': '65000',
+        'PASSWORD': '69&#OsLd',
     }
 }
 
@@ -66,7 +71,7 @@ if get_from_env('DATABASE_URL', None):
     DATABASES['default']['OPTIONS'] = {'MAX_CONNS': 1}
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = get_from_env('SECRET_KEY', 'secrete')
+SECRET_KEY = get_from_env('SECRET_KEY', '0=_*!^fns(82-=3$bl-a6_%h$pix!$ro(4ya(ag=h(^roug+0y')
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -77,7 +82,7 @@ TIME_ZONE = 'America/Sao_Paulo'
 LANGUAGE_CODE = 'pt-br'
 SITE_ID = 1
 USE_I18N = True
-#USE_TZ = True
+USE_TZ = True
 
 LANGUAGES = (
     ('en', _('English')),
@@ -173,7 +178,7 @@ INSTALLED_APPS = (
     'djcelery',
     'kombu.transport.django',
     ## needed for schema migration
-    'south',
+    #'south',
     ## HELIOS stuff
     'helios_auth',
     'helios',
@@ -194,8 +199,8 @@ VOTER_UPLOAD_REL_PATH = "voters/%Y/%m/%d"
 
 
 # Change your email settings
-DEFAULT_FROM_EMAIL = get_from_env('DEFAULT_FROM_EMAIL', 'email@email.edu')
-DEFAULT_FROM_NAME = get_from_env('DEFAULT_FROM_NAME', _('UNICAMP Sistema e-Voto'))
+DEFAULT_FROM_EMAIL = get_from_env('DEFAULT_FROM_EMAIL', 'ctmq@ccuec.unicamp.br')
+DEFAULT_FROM_NAME = get_from_env('DEFAULT_FROM_NAME', 'UNICAMP Sistema e-Voto')
 SERVER_EMAIL = '%s <%s>' % (DEFAULT_FROM_NAME, DEFAULT_FROM_EMAIL)
 
 LOGIN_URL = '/auth/'
@@ -203,20 +208,20 @@ LOGOUT_ON_CONFIRMATION = True
 
 # The two hosts are here so the main site can be over plain HTTP
 # while the voting URLs are served over SSL.
-URL_HOST = get_from_env("URL_HOST", "https://my.server.edu")
+URL_HOST = get_from_env("URL_HOST", "https://instalacao22.ccuec.unicamp.br")
 
 # IMPORTANT: you should not change this setting once you've created
 # elections, as your elections' cast_url will then be incorrect.
-SECURE_URL_HOST = get_from_env("SECURE_URL_HOST", "https://my.server.edu")
+SECURE_URL_HOST = get_from_env("SECURE_URL_HOST", "https://instalacao22.ccuec.unicamp.br")
 
 # this additional host is used to iframe-isolate the social buttons,
 # which usually involve hooking in remote JavaScript, which could be
 # a security issue. Plus, if there's a loading issue, it blocks the whole
 # page. Not cool.
-SOCIALBUTTONS_URL_HOST= get_from_env("SOCIALBUTTONS_URL_HOST", "https://my.server.edu")
+SOCIALBUTTONS_URL_HOST= get_from_env("SOCIALBUTTONS_URL_HOST", "https://instalacao22.ccuec.unicamp.br")
 
 # election stuff
-SITE_TITLE = get_from_env('SITE_TITLE', _('UNICAMP :: Sistema e-Voto'))
+SITE_TITLE = get_from_env('SITE_TITLE', 'UNICAMP :: Sistema e-Voto')
 MAIN_LOGO_URL = get_from_env('MAIN_LOGO_URL', '/static/logo.png')
 ALLOW_ELECTION_INFO_URL = (get_from_env('ALLOW_ELECTION_INFO_URL', '0') == '1')
 
@@ -224,15 +229,17 @@ ALLOW_ELECTION_INFO_URL = (get_from_env('ALLOW_ELECTION_INFO_URL', '0') == '1')
 FOOTER_LINKS = json.loads(get_from_env('FOOTER_LINKS', '[]'))
 FOOTER_LOGO_URL = get_from_env('FOOTER_LOGO_URL', None)
 
-WELCOME_MESSAGE = get_from_env('WELCOME_MESSAGE', _('Bem-vindo ao Sistema e-Voto Unicamp'))
+WELCOME_MESSAGE = get_from_env('WELCOME_MESSAGE', 'Bem-vindo ao Sistema e-Voto Unicamp')
 
-HELP_EMAIL_ADDRESS = get_from_env('HELP_EMAIL_ADDRESS', 'email@email.edu')
+HELP_EMAIL_ADDRESS = get_from_env('HELP_EMAIL_ADDRESS', 'ctmq@ccuec.unicamp.br')
 
 AUTH_TEMPLATE_BASE = "server_ui/templates/base.html"
 HELIOS_TEMPLATE_BASE = "server_ui/templates/base.html"
 HELIOS_ADMIN_ONLY = False
 HELIOS_VOTERS_UPLOAD = True
 HELIOS_VOTERS_EMAIL = True
+
+EMAIL_HOST_PASSWORD = get_from_env('EMAIL_HOST_PASSWORD', '69&#OsLd')
 
 # are elections private by default?
 HELIOS_PRIVATE_DEFAULT = False
@@ -271,10 +278,9 @@ CAS_ELIGIBILITY_URL = get_from_env('CAS_ELIGIBILITY_URL', "")
 CAS_ELIGIBILITY_REALM = get_from_env('CAS_ELIGIBILITY_REALM', "")
 
 # email server
-EMAIL_HOST = get_from_env('EMAIL_HOST', 'smtp') # localhost
+EMAIL_HOST = get_from_env('EMAIL_HOST', 'smtp.ccuec.unicamp.br') # localhost
 EMAIL_PORT = int(get_from_env('EMAIL_PORT', "587")) # 587 com TLS # 25 sem TLS (autenticacao)
-EMAIL_HOST_USER = get_from_env('EMAIL_HOST_USER', 'email@email.edu')
-EMAIL_HOST_PASSWORD = get_from_env('EMAIL_HOST_PASSWORD', '########')
+EMAIL_HOST_USER = get_from_env('EMAIL_HOST_USER', 'ctmq')
 
 # print "---[[ EMAIL_HOST_PASSWORD = %s]]---" % (os.environ["EMAIL_HOST_PASSWORD"])
 
@@ -315,12 +321,12 @@ TEST_RUNNER = 'djcelery.contrib.test_runner.CeleryTestSuiteRunner'
 # see configuration example in:
 # http://pythonhosted.org/django-auth-ldap/example.html
 
-AUTH_LDAP_SERVER_URI = 'ldap://ldap.edu'
+AUTH_LDAP_SERVER_URI = 'ldap://ldap.ccuec.unicamp.br'
 
 AUTH_LDAP_BIND_DN = ""
 AUTH_LDAP_BIND_PASSWORD = ""
 
-AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=people,dc=edu,dc=edu",
+AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=people,dc=unicamp,dc=br",
     ldap.SCOPE_SUBTREE, "(uid=%(user)s)"
 )
 
@@ -371,3 +377,5 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 USE_EMBEDDED_DS = False
 # end shibboleth auth settings
+
+RODAPE_EMAILS_TASKS = "\n\n--\nSistema e-Voto: Voto Eletronico da Unicamp"

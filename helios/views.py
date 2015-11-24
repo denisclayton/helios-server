@@ -490,7 +490,7 @@ def trustee_upload_pk(request, election, trustee):
     
     # send a note to admin
     try:
-      election.admin.send_message("%s - trustee pk upload" % election.name, "trustee %s (%s) uploaded a pk." % (trustee.name, trustee.email))
+      election.admin.send_message("%s - upload PK do apurador" % election.name, "apurador %s (%s) realizou upload da sua chave pública (PK)." % (trustee.name, trustee.email))
     except:
       # oh well, no message sent
       pass
@@ -1069,7 +1069,7 @@ def trustee_upload_decryption(request, election, trustee_uuid):
     
     try:
       # send a note to admin
-      election.admin.send_message("%s - trustee partial decryption" % election.name, "trustee %s (%s) did their partial decryption." % (trustee.name, trustee.email))
+      election.admin.send_message("%s - desencriptação parcial do apurador" % election.name, "apurador %s (%s) realizou sua desencriptação parcial." % (trustee.name, trustee.email))
     except:
       # ah well
       pass

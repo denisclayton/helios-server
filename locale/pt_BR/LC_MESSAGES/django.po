@@ -40,7 +40,7 @@ msgstr "Nome abreviado"
 
 #: helios/forms.py:15
 msgid "no spaces, will be part of the URL for your election, e.g. my-club-2010"
-msgstr "Sem espaços, será parte da URL da sua eleição, por ex. meu-clube-2014"
+msgstr "Sem espaços, será parte da URL da sua eleição, por ex. vice-presid-cidd2015"
 
 #: helios/forms.py:17 helios/templates/election_bboard.html:36
 #: helios/templates/voters_list.html:146 helios/templates/voters_list.html:155
@@ -56,7 +56,7 @@ msgid ""
 "the pretty name for your election, e.g. My Club 2010 Election. Maximum of "
 "250 characters."
 msgstr ""
-"O nome apresentável para a sua eleição, p.ex.: Eleição do Meu Clube 2014. "
+"O nome apresentável para a sua eleição, p.ex.: Eleição para Vice-presidente da CIDD 2015."
 "Máximo de 250 caracteres."
 
 #: helios/forms.py:18
@@ -85,7 +85,7 @@ msgid ""
 "in the ballot tracking center"
 msgstr ""
 "Se marcada, a identidade dos eleitores será substituída por pseudônimos, p. "
-"ex.: \"V12\", no centro de rastreamento de cédulas."
+"ex.: \"V12\", no Centro de Comprovantes de Votação."
 
 #: helios/forms.py:25
 msgid ""
@@ -229,7 +229,7 @@ msgstr "apuração criptografada apurada"
 
 #: helios/tasks.py:119
 msgid "Helios Decrypt"
-msgstr ""
+msgstr "e-Voto - decifrar apuração"
 
 #: helios/tasks.py:134
 msgid "voter file processed"
@@ -596,8 +596,8 @@ msgid ""
 "all cast ballots in this election.\n"
 msgstr ""
 "\n"
-"  Este é o centro de rastreamento de cédulas,  o qual mostra os números de "
-"rastreamento  de todas as cédulas lançadas nesta eleição. \n"
+"  Este é o Centro de Comprovantes de Votação,  o qual mostra os códigos de "
+"identificação de todas as cédulas lançadas nesta eleição. \n"
 
 #: helios/templates/election_bboard.html:18
 #: helios/templates/voters_list.html:3 helios/templates/voters_list.html:137
@@ -724,7 +724,7 @@ msgid ""
 "    Once you do this, voters will no longer be able to cast a ballot.\n"
 msgstr ""
 "\n"
-"    Depois que você fizer isso, eleitores não conseguirão mais votar.\n"
+"    <u>Depois que você fizer isso, eleitores não conseguirão mais votar</u>.\n"
 
 #: helios/templates/election_compute_tally.html:23
 msgid "compute encrypted tally!"
@@ -766,8 +766,8 @@ msgid ""
 "The list of trustees and their public keys will also be frozen.\n"
 msgstr ""
 "\n"
-"Assim que a cédula for congelada, nenhuma informação da eleição poderá ser "
-"modificada. O que inclui: suas questões, os apuradores e outros detalhes da "
+"Assim que a cédula for congelada, <u>nenhuma informação da eleição poderá ser "
+"modificada</u>. O que inclui: suas questões, os apuradores e outros detalhes da "
 "eleição.\n"
 
 #: helios/templates/election_freeze.html:17
@@ -2002,8 +2002,9 @@ msgid ""
 "Do not forget to upload voters file, using the bulk upload voters button "
 "bellow."
 msgstr ""
-"Não se esqueça de carregar o arquivo de eleitores, clicando no botão "
-"carregar arquivo de eleitores."
+"Não se esqueça de carregar o arquivo de eleitores."
+" Uma forma de salvar o arquivo em UTF-8 é abrir este com o programa Bloco de notas (Windows)."
+" Clique em 'Salvar como...' e depois escolha a opção correspondente para o campo Codificação."
 
 #: helios/templates/voters_list.html:37 helios/templates/voters_manage.html:11
 msgid "bulk upload voters"
@@ -2211,8 +2212,8 @@ msgid ""
 "You have uploaded a file of voters. The first few rows of this file are:\n"
 msgstr ""
 "\n"
-"Você carregou um arquivo de eleitores. As primeiras linhas desse arquivo são "
-"exibidas abaixo para simples conferência:\n"
+"Você carregou um arquivo de eleitores. <u>As primeiras linhas desse arquivo são "
+"exibidas abaixo para simples conferência</u>:\n"
 
 #: helios/templates/voters_upload_confirm.html:14
 msgid "Voter Login"
@@ -2224,7 +2225,7 @@ msgstr "Endereço de Email"
 
 #: helios/templates/voters_upload_confirm.html:38
 msgid "Does this look right to you?"
-msgstr "Os dados estão OK?"
+msgstr "A amostragem dos dados está OK?"
 
 #: helios/templates/voters_upload_confirm.html:41
 msgid "Yes, let's go"
@@ -2283,7 +2284,7 @@ msgstr ""
 "Parece que você negou permissão de acesso às suas\n"
 "informações. Nós entendemos e valorizamos sua privacidade. Nós pedimos por "
 "essa\n"
-"informação para que possamos contactá-lo com seu número de rastreamento de "
+"informação para que possamos contactá-lo com seu código de identificação de "
 "voto e\n"
 "quando uma eleição na qual você participou foi apurada. Nós\n"
 "prometemos não usar essa informação para nenhum outro propósito. Sem\n"
@@ -2397,7 +2398,7 @@ msgid ""
 "As a reminder, your ballot tracking number is:<br />\n"
 msgstr ""
 "\n"
-"Como um lembrete,  seu número de rastreamento de cédula é:<br />\n"
+"Como um lembrete, seu código de identificação de voto é:<br />\n"
 
 #: heliosbooth/templates/submit.html:19
 msgid ""
@@ -3250,6 +3251,18 @@ msgstr "Erro no servidor"
 #: templates/500.html:6
 msgid "There was an error while handling your request."
 msgstr "Houve um erro durante o processamento de sua requisição."
+
+#: helios/tasks.py:108
+msgid "The encrypted tally for election %s has been computed. %s"
+msgstr "A apuração encriptada da eleição '%s' foi processada. %s"
+
+#: helios/tasks.py:126
+msgid "Helios has decrypted its portion of the tally for election %s. %s"
+msgstr "O sistema e-Voto, como apurador padrão, está desencriptando a parte dele da apuração para a eleição '%s'. %s"
+
+#: helios/tasks.py:141
+msgid "Your voter file upload for election %s has been processed. %s voters have been created. %s"
+msgstr "Seu arquivo CSV com colégio eleitoral para eleição '%s' foi processado. %s eleitores foram criados. %s"
 
 #~ msgid "New"
 #~ msgstr "Novo"
