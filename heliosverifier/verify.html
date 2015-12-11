@@ -148,7 +148,7 @@ function load_election_and_ballots(election_url) {
                     result_append("Eleitor #" + (i+1));
                     result_append("-- UUID: " + cast_vote.voter_uuid);
                     //result_append("-- Ballot Tracking Number: " + vote.get_hash());
-                    result_append("-- Número de Rastreamento da Cédula: " + vote.get_hash());
+                    result_append("-- Código Comprovante de Voto: " + vote.get_hash());
 
                     vote.verifyProofs(election.public_key, function(answer_num, choice_num, result, choice) {
                         overall_result = overall_result && result;

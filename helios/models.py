@@ -709,7 +709,7 @@ class VoterFile(models.Model):
       voter_stream = open(self.voter_file.path, "rU")
 
     #reader = unicode_csv_reader(voter_stream)
-    reader = unicodecsv.reader(voter_stream, encoding='utf-8')
+    reader = unicodecsv.reader(voter_stream, encoding='utf-8-sig')
 
     for voter_fields in reader:
       # bad line
@@ -752,8 +752,8 @@ class VoterFile(models.Model):
       # create the voter
       if not existing_voter:
         voter_uuid = str(uuid.uuid4())
-        existing_voter = Voter(uuid= voter_uuid, user = None, voter_login_id = voter['voter_id'],
-                      voter_name = voter['name'], voter_email = voter['email'], election = election)
+        existing_voter = Voter(uuid= voter_uuid, user = None, voter_login_id = voter['voter_id'].strip(),
+                      voter_name = voter['name'].strip(), voter_email = voter['email'].strip(), election = election)
         existing_voter.generate_password()
         new_voters.append(existing_voter)
         existing_voter.save()
@@ -818,7 +818,7 @@ class Voter(HeliosModel):
     return self.user.name
 
   # DENIS - ultimo upload sobrescreve demais. Registros em helios_voter devem ser apagados de forma a constar somente os usuarios indicados no CSV carregado por
-  # ultimo. Atualizar helios_electionlog.
+  # ultimo. Atualiza helios_electionlog.
   # TODO  - na view acrescentar informacao: apagado(s) X eleitor(es), antes de informar novo processamento de CSV.
   @classmethod
   @transaction.commit_on_success
@@ -889,7 +889,7 @@ class Voter(HeliosModel):
   @classmethod
   def get_by_election_and_voter_id(cls, election, voter_id):
     try:
-      return cls.objects.get(election = election, voter_login_id = voter_id)
+      return cls.objects.get(election = election, voter_login_id = voter_id.strip())
     except cls.DoesNotExist:
       return None
     
@@ -944,9 +944,9 @@ class Voter(HeliosModel):
     if self.voter_login_id:
       # for backwards compatibility with v3.0, and since it doesn't matter
       # too much if we hash the email or the unique login ID here.
-      value_to_hash = self.voter_login_id
+      value_to_hash = self.voter_login_id.strip()
     else:
-      value_to_hash = self.voter_id
+      value_to_hash = self.voter_id.strip()
 
     try:
       return utils.hash_b64(value_to_hash)
@@ -974,9 +974,9 @@ class Voter(HeliosModel):
     # CSV_VOTERS_PASSWORD_SIMPLIFIED means password generated with 6 letters and just in lowercase.
     if settings.CSV_VOTERS_PASSWORD_SIMPLIFIED:
       length = 06
-      self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyz')
+      self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyz').strip()
     else:
-      self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ23456789')
+      self.voter_password = heliosutils.random_string(length, alphabet='abcdefghijkmnopqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ23456789').strip()
 
   # metadata for the election
   @property
