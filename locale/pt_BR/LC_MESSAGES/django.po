@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: helios-unicamp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-14 16:16-0300\n"
+"POT-Creation-Date: 2015-12-17 15:06-0200\n"
 "PO-Revision-Date: 2015-10-14 16:16-0300\n"
 "Last-Translator: Shirlei Chaves <shirlei@gmail.com>\n"
 "Language-Team: \n"
@@ -18,21 +18,1712 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: settings.py:77
-msgid "English"
-msgstr "Inglês"
+#: ENV/djcelery/templates/admin/djcelery/change_list.html:7
+#: ENV/djcelery/templates/djcelery/confirm_rate_limit.html:6
+#: heliosinstitution/templates/navbar-bootstrap.html:15
+#: server_ui/templates/navbar.html:9
+msgid "Home"
+msgstr "Início"
 
-#: settings.py:78
-msgid "Brazilian Portuguese"
-msgstr "Português Brasileiro"
+#: ENV/djcelery/templates/djcelery/confirm_rate_limit.html:9
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:167
+msgid "Rate limit selected tasks"
+msgstr ""
 
-#: settings.py:215
-msgid "Unicamp Sistema e-voto"
-msgstr "Sistema de Votação Online da Unicamp"
+#: ENV/djcelery/templates/djcelery/confirm_rate_limit.html:22
+msgid "Rate limit"
+msgstr ""
 
-#: settings.py:223
-msgid "Welcome to Unicamp Sistema e-voto"
-msgstr "Bem Vindo ao Sistema de Votação Online da Unicamp"
+#: ENV/lib/python2.7/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/contrib/staticfiles/apps.py:8
+#, fuzzy
+#| msgid "Statistics"
+msgid "Static Files"
+msgstr "Estatísticas"
+
+#: ENV/lib/python2.7/site-packages/django/contrib/syndication/apps.py:8
+#, fuzzy
+#| msgid "Authentication"
+msgid "Syndication"
+msgstr "Autenticação"
+
+#: ENV/lib/python2.7/site-packages/django/contrib/webdesign/apps.py:8
+msgid "Web Design"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:21
+msgid "Enter a valid value."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:77
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:664
+msgid "Enter a valid URL."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:112
+msgid "Enter a valid integer."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:123
+#, fuzzy
+#| msgid "Email address"
+msgid "Enter a valid email address."
+msgstr "Endereço de e-mail"
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:188
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:191
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:210
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:196
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:211
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:206
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:209
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:232
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1075
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:239
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:258
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:265
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:274
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/core/validators.py:285
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/base.py:971
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:716
+#: helios/templates/election_view.html:130
+msgid "and"
+msgstr "  "
+
+#: ENV/lib/python2.7/site-packages/django/db/models/base.py:973
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:104
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:105
+msgid "This field cannot be null."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:106
+msgid "This field cannot be blank."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:107
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:111
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:118
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:852
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1582
+msgid "Integer"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:856
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1580
+#, python-format
+msgid "'%(value)s' value must be an integer."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:931
+#, python-format
+msgid "'%(value)s' value must be either True or False."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:933
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1009
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1070
+msgid "Comma-separated integers"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1085
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1087
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1194
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1090
+msgid "Date (without time)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1192
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1196
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1200
+msgid "Date (with time)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1306
+#, python-format
+msgid "'%(value)s' value must be a decimal number."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1308
+msgid "Decimal number"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453
+#: heliosinstitution/templates/manage_users.html:11
+#: heliosinstitution/templates/manage_users.html:23
+msgid "Email address"
+msgstr "Endereço de e-mail"
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1479
+msgid "File path"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1546
+#, python-format
+msgid "'%(value)s' value must be a float."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1548
+msgid "Floating point number"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1632
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1647
+#, fuzzy
+#| msgid "Email address"
+msgid "IPv4 address"
+msgstr "Endereço de e-mail"
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1677
+#, fuzzy
+#| msgid "Email address"
+msgid "IP address"
+msgstr "Endereço de e-mail"
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1756
+#, python-format
+msgid "'%(value)s' value must be either None, True or False."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1758
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1818
+msgid "Positive integer"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1830
+msgid "Positive small integer"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1843
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1872
+#, fuzzy
+#| msgid "all voters"
+msgid "Small integer"
+msgstr "todos os eleitores"
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1879
+msgid "Text"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1902
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1904
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1907
+msgid "Time"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1989
+msgid "URL"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/__init__.py:2012
+msgid "Raw binary data"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/files.py:225
+msgid "File"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/files.py:375
+msgid "Image"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/related.py:1606
+#, python-format
+msgid "%(model)s instance with pk %(pk)r does not exist."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/related.py:1608
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/related.py:1798
+msgid "One-to-one relationship"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/db/models/fields/related.py:1868
+msgid "Many-to-many relationship"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:55
+msgid "This field is required."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:225
+msgid "Enter a whole number."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:268
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:305
+msgid "Enter a number."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:307
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:311
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:315
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:426
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:1132
+msgid "Enter a valid date."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:450
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:1133
+msgid "Enter a valid time."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:472
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:553
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:554
+msgid "No file was submitted."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:555
+msgid "The submitted file is empty."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:557
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:560
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:621
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:771
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:860
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:1205
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:861
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:976
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:1204
+#, fuzzy
+#| msgid "view the list of voters"
+msgid "Enter a list of values."
+msgstr "visualizar a lista de eleitores"
+
+#: ENV/lib/python2.7/site-packages/django/forms/fields.py:977
+msgid "Enter a complete value."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: ENV/lib/python2.7/site-packages/django/forms/forms.py:122
+msgid ":"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/forms.py:192
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: ENV/lib/python2.7/site-packages/django/forms/forms.py:620
+msgid ":?.!"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/formsets.py:95
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/formsets.py:332
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/formsets.py:339
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/formsets.py:367
+#: ENV/lib/python2.7/site-packages/django/forms/formsets.py:369
+msgid "Order"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/formsets.py:371
+#: helioslog/models.py:18
+msgid "Delete"
+msgstr "Apagar"
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:710
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:714
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:720
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:728
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:1030
+msgid "The inline foreign key did not match the parent instance primary key."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:1096
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:1207
+#, python-format
+msgid "\"%(pk)s\" is not a valid value for a primary key."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/models.py:1218
+msgid ""
+"Hold down \"Control\", or \"Command\" on a Mac, to select more than one."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/utils.py:157
+#, python-format
+msgid ""
+"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/widgets.py:350
+msgid "Currently"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/widgets.py:351
+msgid "Change"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/widgets.py:352
+msgid "Clear"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/widgets.py:546
+msgid "Unknown"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/forms/widgets.py:547
+#: heliosinstitution/templates/institution_users.html:24
+msgid "Yes"
+msgstr "Sim"
+
+#: ENV/lib/python2.7/site-packages/django/forms/widgets.py:548
+#: heliosinstitution/templates/institution_users.html:24
+msgid "No"
+msgstr "Não"
+
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:855
+msgid "yes,no,maybe"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:884
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:896
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:898
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:900
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:902
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:904
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/template/defaultfilters.py:906
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dateformat.py:59
+msgid "p.m."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dateformat.py:60
+msgid "a.m."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dateformat.py:65
+msgid "PM"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dateformat.py:66
+msgid "AM"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dateformat.py:149
+msgid "midnight"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dateformat.py:151
+msgid "noon"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:10
+#, fuzzy
+#| msgid "Trustee"
+msgid "Tue"
+msgstr "Apurador"
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:11
+#, fuzzy
+#| msgid "Start"
+msgid "Sat"
+msgstr "Início"
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "January"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "February"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:18
+#, fuzzy
+#| msgid "search"
+msgid "March"
+msgstr "buscar"
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "April"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "May"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:18
+msgid "June"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "July"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "August"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "September"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "October"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:19
+msgid "November"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:20
+msgid "December"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:23
+#, fuzzy
+#| msgid "and"
+msgid "jan"
+msgstr "  "
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "feb"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "mar"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "apr"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "may"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:23
+msgid "jun"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "jul"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "aug"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "sep"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "oct"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "nov"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:24
+msgid "dec"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:31
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:32
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:33
+#, fuzzy
+#| msgid "search"
+msgctxt "abbrev. month"
+msgid "March"
+msgstr "buscar"
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:34
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:35
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:36
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:37
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:38
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:39
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:40
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:41
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:42
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:45
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:46
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:47
+#, fuzzy
+#| msgid "search"
+msgctxt "alt. month"
+msgid "March"
+msgstr "buscar"
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:48
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:49
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:50
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:51
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:52
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:53
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:54
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:55
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/dates.py:56
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/ipv6.py:10
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s..."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/text.py:245
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: ENV/lib/python2.7/site-packages/django/utils/text.py:264
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:57
+msgid ", "
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:25
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:26
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:27
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:28
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:29
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:30
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ENV/lib/python2.7/site-packages/django/utils/timesince.py:46
+msgid "0 minutes"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/csrf.py:105
+msgid "Forbidden"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/csrf.py:106
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/csrf.py:110
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer "
+"header' to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/csrf.py:115
+msgid ""
+"If you have configured your browser to disable 'Referer' headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for 'same-"
+"origin' requests."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/csrf.py:120
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/csrf.py:125
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for 'same-origin' requests."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/csrf.py:129
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:43
+msgid "No year specified"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:99
+msgid "No month specified"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:158
+msgid "No day specified"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:214
+msgid "No week specified"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:369
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:397
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:650
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/dates.py:682
+#, python-format
+msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/detail.py:54
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/list.py:62
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/list.py:67
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/generic/list.py:158
+#, python-format
+msgid "Empty list and '%(class_name)s.allow_empty' is False."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/static.py:54
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/django/views/static.py:56
+#, fuzzy, python-format
+#| msgid "Institution does not exist"
+msgid "\"%(path)s\" does not exist"
+msgstr "A instituição não existe"
+
+#: ENV/lib/python2.7/site-packages/django/views/static.py:96
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:47
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:54
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:27
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:314
+msgid "state"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:61
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:328
+msgid "ETA"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:68
+msgid "when"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:74
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:194
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:320
+#: ENV/lib/python2.7/site-packages/kombu/transport/django/models.py:10
+#, fuzzy
+msgid "name"
+msgstr "Nome de usuário"
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:106
+#, fuzzy
+#| msgid "User details"
+msgid "Task detail"
+msgstr "Detalhes do Usuário"
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:107
+msgid "Tasks"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:122
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:317
+msgid "UUID"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:148
+#, fuzzy
+#| msgid "Can revoke election management tasks"
+msgid "Revoke selected tasks"
+msgstr "Pode revogar tarefas de gestão de eleição"
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:154
+msgid "Terminate selected tasks"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:160
+msgid "Kill selected tasks"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:180
+#, fuzzy
+#| msgid "create election"
+msgid "Rate limit selection"
+msgstr "criar eleição"
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:205
+#, fuzzy
+#| msgid "User details"
+msgid "Node detail"
+msgstr "Detalhes do Usuário"
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:206
+msgid "Worker Nodes"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:213
+msgid "Shutdown selected worker nodes"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:217
+msgid "Enable event mode for selected nodes."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:222
+msgid "Disable event mode for selected nodes."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:252
+#, fuzzy
+#| msgid "register!"
+msgid "Task (registered)"
+msgstr "registrar!"
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:254
+msgid "Task (custom)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/admin.py:266
+msgid "Need name of task"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:8
+msgid "just now"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:9
+#, python-format
+msgid "%(seconds)d second ago"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:9
+#, python-format
+msgid "%(seconds)d seconds ago"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:10
+#, python-format
+msgid "%(minutes)d minute ago"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:10
+#, python-format
+msgid "%(minutes)d minutes ago"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:11
+#, python-format
+msgid "%(hours)d hour ago"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:11
+#, python-format
+msgid "%(hours)d hours ago"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:12
+#, python-format
+msgid "yesterday at %(time)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:13
+msgid "year"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:13
+msgid "years"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:14
+msgid "month"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:14
+msgid "months"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:15
+msgid "week"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:15
+msgid "weeks"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:16
+msgid "day"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:16
+msgid "days"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/humanize.py:23
+#, python-format
+msgid "%(number)d %(type)s ago"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:25
+msgid "task id"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:31
+#, fuzzy
+#| msgid "none yet"
+msgid "done at"
+msgstr "nada ainda"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:32
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:333
+msgid "traceback"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:35
+msgid "meta"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:41
+#, fuzzy
+#| msgid "back to start"
+msgid "task state"
+msgstr "voltar ao início"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:42
+msgid "task states"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:59
+msgid "group id"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:61
+#, fuzzy
+#| msgid "created by"
+msgid "created at"
+msgstr "criado(a) por"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:68
+msgid "saved group result"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:69
+msgid "saved group results"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:81
+msgid "Days"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:82
+msgid "Hours"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:83
+msgid "Minutes"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:84
+msgid "Seconds"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:85
+msgid "Microseconds"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:89
+msgid "every"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:91
+msgid "period"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:95
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:199
+#, fuzzy
+#| msgid "Enter email"
+msgid "interval"
+msgstr "Informar e-mail"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:96
+#, fuzzy
+#| msgid "Enter email"
+msgid "intervals"
+msgstr "Informar e-mail"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:115
+#, python-format
+msgid "every %(period)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:116
+#, python-format
+msgid "every %(every)s %(period)s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:122
+msgid "minute"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:125
+msgid "hour"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:128
+msgid "day of week"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:131
+msgid "day of month"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:134
+msgid "month of year"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:138
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:203
+msgid "crontab"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:139
+msgid "crontabs"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:195
+#, fuzzy
+#| msgid "Description"
+msgid "Useful description"
+msgstr "Descrição"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:196
+#, fuzzy
+#| msgid "Short name"
+msgid "task name"
+msgstr "Nome abreviado"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:204
+msgid "Use one of interval/crontab"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:207
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:325
+msgid "Arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:208
+msgid "JSON encoded positional arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:211
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:326
+msgid "Keyword arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:212
+msgid "JSON encoded keyword arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:215
+#: ENV/lib/python2.7/site-packages/kombu/transport/django/models.py:16
+msgid "queue"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:216
+msgid "Queue defined in CELERY_QUEUES"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:219
+msgid "exchange"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:222
+msgid "routing key"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:225
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:331
+#, fuzzy
+#| msgid "Expires at"
+msgid "expires"
+msgstr "Expira em"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:228
+msgid "enabled"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:238
+#, fuzzy
+#| msgid "Description"
+msgid "description"
+msgstr "Descrição"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:244
+msgid "periodic task"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:245
+msgid "periodic tasks"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:283
+#, fuzzy
+#| msgid "Short name"
+msgid "hostname"
+msgstr "Nome abreviado"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:284
+msgid "last heartbeat"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:291
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:340
+msgid "worker"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:292
+msgid "workers"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:323
+msgid "event received at"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:332
+#, fuzzy
+#| msgid "release result"
+msgid "result"
+msgstr "liberar o resultado"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:335
+#, fuzzy
+#| msgid "Election type"
+msgid "execution time"
+msgstr "Tipo da eleição"
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:336
+msgid "in seconds if task successful"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:338
+msgid "number of retries"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:348
+msgid "task"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/djcelery/models.py:349
+msgid "tasks"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:313
+msgid "usage: "
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:821
+msgid ".__call__() not defined"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1105
+#, python-format
+msgid "unknown parser %r (choices: %s)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1146
+#, python-format
+msgid "argument \"-\" with mode %r"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1349
+#, python-format
+msgid "cannot merge actions - two groups are named %r"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1387
+msgid "'required' is an invalid argument for positionals"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1407
+#, python-format
+msgid "invalid option string %r: must start with a character %r"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1428
+#, fuzzy, python-format
+#| msgid "Cookies are required for Helios use"
+msgid "dest= is required for options like %r"
+msgstr "Cookies são necessários para o uso do Helios"
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1445
+#, python-format
+msgid "invalid conflict_resolution value: %r"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1463
+#, python-format
+msgid "conflicting option string(s): %s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1526
+msgid "mutually exclusive arguments must be optional"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1596
+msgid "positional arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1597
+msgid "optional arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1615
+msgid "show this help message and exit"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1621
+msgid "show program's version number and exit"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1653
+msgid "cannot have multiple subparser arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1705
+#, python-format
+msgid "unrecognized arguments: %s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1802
+#, python-format
+msgid "not allowed with argument %s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1848
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1862
+#, python-format
+msgid "ignored explicit argument %r"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1952
+msgid "too few arguments"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1959
+#, python-format
+msgid "argument %s is required"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:1973
+#, python-format
+msgid "one of the arguments %s is required"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2019
+msgid "expected one argument"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2020
+msgid "expected at most one argument"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2021
+#, fuzzy
+#| msgid "add at least one trustee"
+msgid "expected at least one argument"
+msgstr "adicionar ao menos um apurador"
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2023
+#, python-format
+msgid "expected %s argument(s)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2080
+#, python-format
+msgid "ambiguous option: %s could match %s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2142
+#, python-format
+msgid "unexpected option string: %s"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2243
+#, python-format
+msgid "%r is not callable"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2259
+#, python-format
+msgid "invalid %s value: %r"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2269
+#, python-format
+msgid "invalid choice: %r (choose from %s)"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/gunicorn/argparse_compat.py:2362
+#, python-format
+msgid "%s: error: %s\n"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/httplib2/__init__.py:410
+#, python-format
+msgid "Content purported to be compressed with %s but failed to decompress."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/httplib2/__init__.py:520
+#, python-format
+msgid "Unsupported value for qop: %s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/httplib2/__init__.py:523
+#: ENV/lib/python2.7/site-packages/httplib2/__init__.py:585
+#, python-format
+msgid "Unsupported value for algorithm: %s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/httplib2/__init__.py:582
+msgid "The challenge doesn't contain a server nonce, or this one is empty."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/httplib2/__init__.py:588
+#, python-format
+msgid "Unsupported value for pw-algorithm: %s."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/httplib2/__init__.py:1374
+msgid "Redirected but the response is missing a Location: header."
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/kombu/transport/django/models.py:17
+msgid "queues"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/kombu/transport/django/models.py:24
+msgid "payload"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/kombu/transport/django/models.py:31
+msgid "message"
+msgstr ""
+
+#: ENV/lib/python2.7/site-packages/kombu/transport/django/models.py:32
+msgid "messages"
+msgstr ""
 
 #: helios/forms.py:14
 msgid "Short name"
@@ -40,10 +1731,11 @@ msgstr "Nome abreviado"
 
 #: helios/forms.py:15
 msgid "no spaces, will be part of the URL for your election, e.g. my-club-2010"
-msgstr "Sem espaços, será parte da URL da sua eleição, por ex. vice-presid-cidd2015"
+msgstr ""
+"Sem espaços, será parte da URL da sua eleição, por ex. vice-presid-cidd2015"
 
 #: helios/forms.py:17 helios/templates/election_bboard.html:36
-#: helios/templates/voters_list.html:146 helios/templates/voters_list.html:155
+#: helios/templates/voters_list.html:147 helios/templates/voters_list.html:156
 #: helios/templates/voters_manage.html:29
 #: helios/templates/voters_upload_confirm.html:14
 #: heliosinstitution/templates/elections_administered.html:11
@@ -56,8 +1748,8 @@ msgid ""
 "the pretty name for your election, e.g. My Club 2010 Election. Maximum of "
 "250 characters."
 msgstr ""
-"O nome apresentável para a sua eleição, p.ex.: Eleição para Vice-presidente da CIDD 2015."
-"Máximo de 250 caracteres."
+"O nome apresentável para a sua eleição, p.ex.: Eleição para Vice-presidente "
+"da CIDD 2015.Máximo de 250 caracteres."
 
 #: helios/forms.py:18
 msgid "Description"
@@ -158,8 +1850,8 @@ msgstr "apenas eleitores que lançaram uma cédula"
 msgid "no one -- are you sure about this?"
 msgstr "nenhum - você tem certeza disso?"
 
-#: helios/forms.py:67 helios/templates/_castconfirm_password.html:10
-#: helios/templates/_castconfirm_password.html:11
+#: helios/forms.py:67 helios/templates/_castconfirm_password.html:11
+#: helios/templates/_castconfirm_password.html:12
 msgid "Voter ID"
 msgstr "ID do Eleitor"
 
@@ -201,17 +1893,17 @@ msgstr "informar a lista de eleitores (ou tornar o registro aberto ao público)"
 msgid "cannot freeze an election that has issues"
 msgstr "não é possível congelar uma eleição com problemas"
 
-#: helios/models.py:951
+#: helios/models.py:972
 msgid "password already exists"
 msgstr "senha já existe"
 
-#: helios/models.py:1062
+#: helios/models.py:1088
 msgid "cast vote is quarantined, verification and storage is delayed."
 msgstr ""
 "lançamento de votos está em quarentena, verificação e armazenamento estão "
 "postergados."
 
-#: helios/models.py:1087
+#: helios/models.py:1113
 msgid ""
 "the vote's election UUID does not match the election for which this vote is "
 "being cast"
@@ -223,143 +1915,62 @@ msgstr ""
 msgid "no election ID"
 msgstr "Nenhum ID de eleição"
 
-#: helios/tasks.py:102
+#: helios/tasks.py:108
 msgid "encrypted tally computed"
 msgstr "apuração criptografada apurada"
 
-#: helios/tasks.py:119
+#: helios/tasks.py:109
+#, python-format
+msgid "The encrypted tally for election %s has been computed. %s"
+msgstr "A apuração encriptada da eleição '%s' foi processada. %s"
+
+#: helios/tasks.py:126
 msgid "Helios Decrypt"
 msgstr "e-Voto - decifrar apuração"
 
-#: helios/tasks.py:134
+#: helios/tasks.py:127
+#, python-format
+msgid "Helios has decrypted its portion of the tally for election %s. %s"
+msgstr ""
+"O sistema e-Voto, como apurador padrão, está desencriptando a parte dele da "
+"apuração para a eleição '%s'. %s"
+
+#: helios/tasks.py:141
 msgid "voter file processed"
 msgstr "arquivo de eleitores processado"
 
-#: helios/utils.py:79
-msgid "not implemented yet"
-msgstr "não implementado ainda"
-
-#: helios/views.py:179
-msgid "only an administrator has elections to administer"
-msgstr "somente um administrador tem eleições para administrar"
-
-#: helios/views.py:197
-msgid "only an administrator can create an election"
-msgstr "somente um administrador pode criar uma eleição"
-
-#: helios/views.py:230
-msgid "No special characters allowed in the short name."
-msgstr "Nenhum caracter especial é permitido no nome abreviado"
-
-#: helios/views.py:331
-#, python-format
-msgid "Vote in %(election_name)s"
-msgstr "Votar em %(election_name)s"
-
-#: helios/views.py:334
-#, python-format
-msgid "Register to vote in %(election_name)s"
-msgstr "Registre-se para votar %(election_name)s"
-
-#: helios/views.py:339
-#, python-format
-msgid "Results are in for %(election_name)s"
-msgstr "Os resultados estão em %(election_name)s"
-
-#: helios/views.py:454
-#, python-format
-msgid "You are a trustee for %(election_name)s \n"
-msgstr ""
-"Prezado (a),  \n"
-"\n"
-"Você foi designado como apurador para a eleição %(election_name)s.\n"
-"\n"
-
-#: helios/views.py:455
+#: helios/tasks.py:142
 #, python-format
 msgid ""
-"Your trustee dashboard is at: \n"
-" %(url)s"
+"Your voter file upload for election %s has been processed. %s voters have "
+"been created. %s"
 msgstr ""
-"Você deve obrigatoriamente entrar no endereço abaixo para que possa carregar "
-"suas informações de apurador. Se não fizer isto, não será possível dar "
-"continuidade a eleição. Ou seja, nenhum eleitor poderá votar nesta "
-"eleição. \n"
-"\n"
-"A sua página de apurador pode ser acessada no endereço: \n"
-"\n"
-" %(url)s \n"
-"\n"
-"ATENÇÃO: Esse e-mail deve ser guardado para referência futura, para que você "
-"possa acessar novamente sua página de apurador através do link fornecido "
-"acima."
-
-#: helios/views.py:462
-#, python-format
-msgid "your trustee homepage for %(election_name)s"
-msgstr ""
-"ATENÇÃO: Você foi designado como apurador para a eleição  %(election_name)s"
-
-#: helios/views.py:678
-#, python-format
-msgid "I voted in %(url)s - my smart tracker is %(vote_hash)s.. #heliosvoting"
-msgstr "Eu votei em %(url)s - meu comprovante é %(vote_hash)s.. #heliosvoting"
-
-#: helios/views.py:976
-msgid "registration is closed for this election"
-msgstr "registro fechado para essa eleição"
-
-#: helios/views.py:1243
-msgid "Constraints successfully saved"
-msgstr "Restrições salvas com sucesso."
-
-#: helios/views.py:1295
-msgid "no voter file specified, try again"
-msgstr "nenhum arquivo carregado, tente novamente"
-
-#: helios/views.py:1315
-msgid "Time to Vote"
-msgstr "Hora de Votar"
-
-#: helios/views.py:1316
-msgid "Simple"
-msgstr "Simples"
-
-#: helios/views.py:1317
-msgid "Additional Info"
-msgstr "Informação Adicional"
-
-#: helios/views.py:1318
-msgid "Election Result"
-msgstr "Resultado da Eleição"
-
-#: helios/views.py:1323
-msgid "bad template"
-msgstr "template inválido"
+"Seu arquivo CSV com colégio eleitoral para eleição '%s' foi processado. %s "
+"eleitores foram criados. %s"
 
 #: helios/templates/_castconfirm_docast.html:20
 msgid "You are logged in as"
 msgstr "Você está conectado como "
 
-#: helios/templates/_castconfirm_docast.html:22
+#: helios/templates/_castconfirm_docast.html:23
 msgid "CAST this ballot"
 msgstr ">> DEPOSITAR cédula na urna"
 
-#: helios/templates/_castconfirm_docast.html:23
+#: helios/templates/_castconfirm_docast.html:24
 msgid ""
 "You can cast as many ballots as you want.<br />Only the last one counts."
 msgstr ""
 "Você pode depositar quantos votos desejar, porém somente o último será "
 "contabilizado."
 
-#: helios/templates/_castconfirm_docast.html:27
+#: helios/templates/_castconfirm_docast.html:28
 #: helios/templates/combine_decryptions.html:7
 #: helios/templates/election_edit.html:8 helios/templates/new_trustee.html:4
 #: helios/templates/release_result.html:7
 msgid "cancel"
 msgstr "<< Cancelar"
 
-#: helios/templates/_castconfirm_docast.html:28
+#: helios/templates/_castconfirm_docast.html:29
 msgid ""
 "If you cancel now, your ballot will <em>NOT</em> be recorded.<br />\n"
 "    You can start the voting process over again, of course."
@@ -367,43 +1978,52 @@ msgstr ""
 "Se você cancelar agora, sua cédula <em>NÃO</em> será registrada.<br />\n"
 "    Você pode reiniciar o processo de votação mais tarde."
 
-#: helios/templates/_castconfirm_docast.html:38
+#: helios/templates/_castconfirm_docast.html:39
 msgid "voting has stopped, sorry."
 msgstr "a votação parou, desculpe-nos."
 
-#: helios/templates/_castconfirm_docast.html:43
+#: helios/templates/_castconfirm_docast.html:44
 msgid "voting has not yet begun, sorry."
 msgstr "a votação ainda não está aberta, desculpe-nos."
 
-#: helios/templates/_castconfirm_password.html:2
+#: helios/templates/_castconfirm_password.html:3
 msgid "Please provide the voter ID and password you received by email."
 msgstr ""
 "Por favor, informe o nome de usuário e senha que você recebeu por email."
 
-#: helios/templates/_castconfirm_password.html:14
 #: helios/templates/_castconfirm_password.html:15
+#: helios/templates/_castconfirm_password.html:16
 #: helios_auth/templates/ldapauth/login.html:16
 #: helios_auth/templates/ldapauth/login.html:17
 msgid "Password"
 msgstr "Senha"
 
-#: helios/templates/_castconfirm_password.html:20
+#: helios/templates/_castconfirm_password.html:21
 msgid "bad voter ID or password, please try again."
 msgstr "Usuário ou senha incorretos, por favor, tente novamente."
 
-#: helios/templates/_castconfirm_password.html:26
+#: helios/templates/_castconfirm_password.html:27
+#, fuzzy
+#| msgid "You may cast as many ballots as you wish: only the last one counts."
 msgid ""
-"You may cast as many ballots as you wish: only the last one counts."
+"You may cast as many ballots as you wish:<br />only the last one counts."
 msgstr ""
-"Você pode depositar quantos votos desejar, somente o último será contabilizado."
+"Você pode depositar quantos votos desejar, somente o último será "
+"contabilizado."
 
-#: helios/templates/_castconfirm_password.html:29
+#: helios/templates/_castconfirm_password.html:30
 msgid "Vote"
 msgstr ">> Depositar Voto"
 
-#: helios/templates/_castconfirm_password.html:32
-#: helios_auth/templates/login_box.html:11
+#: helios/templates/_castconfirm_password.html:34
+msgid "You may cast as many ballots as you wish: only the last one counts."
+msgstr ""
+"Você pode depositar quantos votos desejar, somente o último será "
+"contabilizado."
+
+#: helios/templates/_castconfirm_password.html:40
 #: helios_auth/templates/ldapauth/login.html:20
+#: helios_auth/templates/login_box.html:11
 #: helios_auth/templates/password/login.html:4
 #: helios_auth/templates/password/login.html:23
 #: server_ui/templates/navbar.html:23
@@ -428,9 +2048,9 @@ msgstr ""
 "\n"
 "    Você receberá em breve um e-mail confirmando que seu voto foi depositado "
 "corretamente. Assim que receber este e-mail você poderá acessar a página "
-"pública da eleição, através do link abaixo, e verificar que o comprovante "
-"do seu voto aparece na listagem de cédulas depositadas na urna. "
-"Essa é a sua garantiria que seu voto será contabilizado corretamente.\n"
+"pública da eleição, através do link abaixo, e verificar que o comprovante do "
+"seu voto aparece na listagem de cédulas depositadas na urna. Essa é a sua "
+"garantiria que seu voto será contabilizado corretamente.\n"
 
 #: helios/templates/cast_done.html:15
 msgid "Your smart ballot tracker is:"
@@ -569,7 +2189,7 @@ msgstr "voltar ao início"
 #: helios/templates/election_bboard.html:29
 #: helios/templates/stats_admin_actions.html:16
 #: helios/templates/stats_elections.html:16
-#: helios/templates/voters_list.html:140 helios/templates/voters_list.html:194
+#: helios/templates/voters_list.html:141 helios/templates/voters_list.html:195
 #: helios/templates/voters_manage.html:17
 #: helios/templates/voters_manage.html:25
 #: heliosinstitution/templates/stats_admin_actions.html:15
@@ -600,20 +2220,20 @@ msgstr ""
 "identificação de todas as cédulas lançadas nesta eleição. \n"
 
 #: helios/templates/election_bboard.html:18
-#: helios/templates/voters_list.html:3 helios/templates/voters_list.html:137
-#: helios/templates/voters_list.html:191
+#: helios/templates/voters_list.html:3 helios/templates/voters_list.html:138
+#: helios/templates/voters_list.html:192
 msgid "Voters"
 msgstr "Eleitores"
 
 #: helios/templates/election_bboard.html:34
-#: helios/templates/voters_list.html:114 helios/templates/voters_list.html:148
-#: helios/templates/voters_list.html:153
+#: helios/templates/voters_list.html:115 helios/templates/voters_list.html:149
+#: helios/templates/voters_list.html:154
 #: helios/templates/voters_manage.html:29
 msgid "Alias"
 msgstr "Pseudônimo"
 
 #: helios/templates/election_bboard.html:38
-#: helios/templates/voters_list.html:159
+#: helios/templates/voters_list.html:160
 msgid "Smart Ballot Tracker"
 msgstr "Comprovante de Voto"
 
@@ -724,7 +2344,8 @@ msgid ""
 "    Once you do this, voters will no longer be able to cast a ballot.\n"
 msgstr ""
 "\n"
-"    <u>Depois que você fizer isso, eleitores não conseguirão mais votar</u>.\n"
+"    <u>Depois que você fizer isso, eleitores não conseguirão mais votar</"
+"u>.\n"
 
 #: helios/templates/election_compute_tally.html:23
 msgid "compute encrypted tally!"
@@ -766,9 +2387,9 @@ msgid ""
 "The list of trustees and their public keys will also be frozen.\n"
 msgstr ""
 "\n"
-"Assim que a cédula for congelada, <u>nenhuma informação da eleição poderá ser "
-"modificada</u>. O que inclui: suas questões, os apuradores e outros detalhes da "
-"eleição.\n"
+"Assim que a cédula for congelada, <u>nenhuma informação da eleição poderá "
+"ser modificada</u>. O que inclui: suas questões, os apuradores e outros "
+"detalhes da eleição.\n"
 
 #: helios/templates/election_freeze.html:17
 msgid ""
@@ -1013,6 +2634,10 @@ msgstr ""
 msgid "back to the election"
 msgstr "voltar para a eleição"
 
+#: helios/templates/election_questions.html:104
+msgid "Minimum value must be lower than the highest."
+msgstr "O valor mínimo deve ser menor que o valor máximo."
+
 #: helios/templates/election_register.html:5
 msgid "Register"
 msgstr "Registrar"
@@ -1102,12 +2727,12 @@ msgid "archive it"
 msgstr "arquivar"
 
 #: helios/templates/election_view.html:29
-#: helios/templates/election_view.html:283
+#: helios/templates/election_view.html:285
 msgid "Election URL:"
 msgstr "URL da Eleição:"
 
 #: helios/templates/election_view.html:34
-#: helios/templates/election_view.html:288
+#: helios/templates/election_view.html:290
 msgid "Election Fingerprint:"
 msgstr "Código de Identificação da Eleição:"
 
@@ -1133,7 +2758,7 @@ msgid "This election is open to:"
 msgstr "Quem pode votar nessa eleição:"
 
 #: helios/templates/election_view.html:69
-#: helios/templates/voters_list.html:101
+#: helios/templates/voters_list.html:102
 msgid "Any user with credentials"
 msgstr ""
 "Qualquer eleitor que tenha um nome de usuário e senha no LDAP da Unicamp"
@@ -1158,10 +2783,6 @@ msgstr "apuradores"
 #: helios/templates/election_view.html:125
 msgid "Next Step:"
 msgstr "O que você ainda precisa fazer:"
-
-#: helios/templates/election_view.html:130
-msgid "and"
-msgstr "  "
 
 #: helios/templates/election_view.html:133
 msgid "freeze ballot and open election."
@@ -1315,48 +2936,48 @@ msgstr ""
 "  Visite <a target=\"_new\" href=\"http://java.sun.com\">java.sun.com</a> "
 "para instalá-lo.\n"
 
-#: helios/templates/election_view.html:256
+#: helios/templates/election_view.html:257
 msgid "voting is not yet open"
 msgstr "Esta eleição ainda não está aberta para votação."
 
-#: helios/templates/election_view.html:270
-#: helios/templates/election_view.html:308
+#: helios/templates/election_view.html:272
+#: helios/templates/election_view.html:310
 msgid "verify"
 msgstr "Conferir a"
 
-#: helios/templates/election_view.html:270
+#: helios/templates/election_view.html:272
 msgid "election tally"
 msgstr "apuração da eleição"
 
-#: helios/templates/election_view.html:272
+#: helios/templates/election_view.html:274
 msgid "review the"
 msgstr "Visualizar a"
 
-#: helios/templates/election_view.html:272
+#: helios/templates/election_view.html:274
 msgid "voting booth"
 msgstr "cabine de votação"
 
-#: helios/templates/election_view.html:272
+#: helios/templates/election_view.html:274
 msgid "review purposes only"
 msgstr "apenas para conferência"
 
-#: helios/templates/election_view.html:281
+#: helios/templates/election_view.html:283
 msgid "Audit Info"
 msgstr "Informação de auditoria"
 
-#: helios/templates/election_view.html:291
+#: helios/templates/election_view.html:293
 msgid "Your smart ballot tracker:"
 msgstr "O rastreador da sua cédula é:"
 
-#: helios/templates/election_view.html:296
+#: helios/templates/election_view.html:298
 msgid "Ballot Tracking Center"
 msgstr "Central de Rastreamento de Cédula"
 
-#: helios/templates/election_view.html:302
+#: helios/templates/election_view.html:304
 msgid "preview booth"
 msgstr "pré-visualização da urna"
 
-#: helios/templates/election_view.html:310
+#: helios/templates/election_view.html:312
 #, python-format
 msgid ""
 " \n"
@@ -1601,7 +3222,7 @@ msgstr "Ações Administrativas"
 
 #: helios/templates/stats_admin_actions.html:10
 #: helios/templates/stats_elections.html:10
-#: helios/templates/voters_list.html:133 helios/templates/voters_list.html:187
+#: helios/templates/voters_list.html:134 helios/templates/voters_list.html:188
 #: heliosinstitution/templates/stats_admin_actions.html:9
 msgid "previous"
 msgstr "anterior"
@@ -1988,44 +3609,52 @@ msgstr ""
 msgid "You can change this setting:"
 msgstr "Configure a lista com os eleitores desta eleição:"
 
-#: helios/templates/voters_list.html:31
-msgid "anyone can vote"
-msgstr ""
-"Qualquer eleitor que tenha um nome de usuário e senha no LDAP da Unicamp"
-
-#: helios/templates/voters_list.html:35
+#: helios/templates/voters_list.html:33
 msgid "only voters listed explicitly below can vote"
-msgstr "Somente eleitores contidos no arquivo a ser carregado (arquivo CSV - <b><u>Salve o arquivo com Codificação UTF-8</b></u>)"
+msgstr ""
+"Somente eleitores contidos no arquivo a ser carregado (arquivo CSV - "
+"<b><u>Salve o arquivo com Codificação UTF-8</b></u>)"
 
-#: helios/templates/voters_list.html:35
+#: helios/templates/voters_list.html:33
 msgid ""
 "Do not forget to upload voters file, using the bulk upload voters button "
 "bellow."
 msgstr ""
-"Não se esqueça de carregar o arquivo de eleitores."
-" Uma forma de salvar o arquivo em UTF-8 é abrir este com o programa Bloco de notas (Windows)."
-" Clique em 'Salvar como...' e depois escolha a opção correspondente para o campo Codificação."
+"Não se esqueça de carregar o arquivo de eleitores. Uma forma de salvar o "
+"arquivo em UTF-8 é abrir este com o programa Bloco de notas (Windows). "
+"Clique em 'Salvar como...' e depois escolha a opção correspondente para o "
+"campo Codificação."
 
-#: helios/templates/voters_list.html:37 helios/templates/voters_manage.html:11
+#: helios/templates/voters_list.html:36 helios/templates/voters_manage.html:11
 msgid "bulk upload voters"
 msgstr "Carregar arquivo de eleitores"
 
-#: helios/templates/voters_list.html:46
+#: helios/templates/voters_list.html:45
 msgid "only voters with the following attributes"
 msgstr "Apenas eleitores com os seguintes atributos"
 
-#: helios/templates/voters_list.html:48
+#: helios/templates/voters_list.html:47
 msgid "Dynamic Fields - CAFe Attributes"
 msgstr "Campos Dinâmicos - Atributos CAFe"
 
-#: helios/templates/voters_list.html:50
+#: helios/templates/voters_list.html:49
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "\t\t                    Click the plus button to add attributes.<br>\n"
+#| "\t\t                    Example: affiliationType = student<br>\n"
+#| "\t\t                    <label class=\"label label-warning\">Attention: "
+#| "all the attributes you set must be provided by your Identity Provider.</"
+#| "label>\n"
+#| "\t\t                "
 msgid ""
 "\n"
-"\t\t                    Click the plus button to add attributes.<br>\n"
-"\t\t                    Example: affiliationType = student<br>\n"
-"\t\t                    <label class=\"label label-warning\">Attention: all "
-"the attributes you set must be provided by your Identity Provider.</label>\n"
-"\t\t                "
+"                            Click the plus button to add attributes.<br>\n"
+"                            Example: affiliationType = student<br>\n"
+"                            <label class=\"label label-warning\">Attention: "
+"all the attributes you set must be provided by your Identity Provider.</"
+"label>\n"
+"                        "
 msgstr ""
 "\n"
 "\t\t                    Clique no botão + para adicionar atributos.<br>\n"
@@ -2035,66 +3664,66 @@ msgstr ""
 "de identidade para o eleitor.</label>\n"
 "\t\t                "
 
-#: helios/templates/voters_list.html:59
+#: helios/templates/voters_list.html:58
 msgid "Attribute Name"
 msgstr "Nome do atributo"
 
-#: helios/templates/voters_list.html:65
+#: helios/templates/voters_list.html:64
 msgid "Comma separated attribute value. Ex. val1,val2,val3"
 msgstr "Valores separados por vírgula. Exemplo: val1, val2, val3."
 
-#: helios/templates/voters_list.html:73
+#: helios/templates/voters_list.html:72
 msgid "limitedreg"
 msgstr "registro limitado"
 
-#: helios/templates/voters_list.html:73
+#: helios/templates/voters_list.html:72
 msgid "only voters who are members of "
 msgstr "apenas eleitores que são membros de"
 
-#: helios/templates/voters_list.html:85
+#: helios/templates/voters_list.html:86
 msgid "update"
 msgstr "Atualizar"
 
-#: helios/templates/voters_list.html:98
+#: helios/templates/voters_list.html:99
 msgid "Who can vote?"
 msgstr "Eleitores aptos a votar nesta eleição:"
 
-#: helios/templates/voters_list.html:103
+#: helios/templates/voters_list.html:104
 msgid "Only the voters listed here"
 msgstr ""
 "Somente eleitores que foram cadastrados especificamente para esta eleição"
 
-#: helios/templates/voters_list.html:111
+#: helios/templates/voters_list.html:112
 msgid "searching for"
 msgstr "procurando por"
 
-#: helios/templates/voters_list.html:111
+#: helios/templates/voters_list.html:112
 msgid "clear search"
 msgstr "limpar busca"
 
-#: helios/templates/voters_list.html:114
+#: helios/templates/voters_list.html:115
 msgid "Voter name"
 msgstr "Nome do eleitor"
 
-#: helios/templates/voters_list.html:114 helios/templates/voters_manage.html:8
+#: helios/templates/voters_list.html:115 helios/templates/voters_manage.html:8
 msgid "search"
 msgstr "buscar"
 
-#: helios/templates/voters_list.html:125
+#: helios/templates/voters_list.html:126
 msgid "cast vote"
 msgstr "Total de votos depositados"
 
-#: helios/templates/voters_list.html:127
+#: helios/templates/voters_list.html:128
 msgid "no votes yet"
 msgstr "Nenhum voto depositado até o momento."
 
-#: helios/templates/voters_list.html:150
+#: helios/templates/voters_list.html:151
 #: heliosinstitution/templates/index.html:88
 #: heliosinstitution/templates/institution_users.html:12
 msgid "E-mail"
 msgstr "E-mail:"
 
-#: helios/templates/voters_list.html:165
+#: helios/templates/voters_list.html:166
 msgid ""
 "Send email to this voter. This action will only be possible if the ballot is "
 "already frozen."
@@ -2102,41 +3731,59 @@ msgstr ""
 "Enviar email para esse eleitor. Essa ação só vai ser possível se você já "
 "tiver congelado a cédula de votação."
 
-#: helios/templates/voters_list.html:166
+#: helios/templates/voters_list.html:167
 msgid "Remove voter"
 msgstr "Remover eleitor"
 
-#: helios/templates/voters_list.html:200
+#: helios/templates/voters_list.html:201
 msgid "no voters."
 msgstr "nenhum eleitor."
 
-#: helios/templates/voters_list.html:213
+#: helios/templates/voters_list.html:214
 msgid "Prior Bulk Uploads:"
-msgstr "Arquivos de eleitores carregados anteriormente (<u>apenas o último arquivo será considerado</u>):"
+msgstr ""
+"Arquivos de eleitores carregados anteriormente (<u>apenas o último arquivo "
+"será considerado</u>):"
 
-#: helios/templates/voters_list.html:222
+#: helios/templates/voters_list.html:223
 msgid "bytes, at"
 msgstr "bytes, em"
 
-#: helios/templates/voters_list.html:224
+#: helios/templates/voters_list.html:225
 msgid "done processing:"
 msgstr "processamento completo:"
 
-#: helios/templates/voters_list.html:224
+#: helios/templates/voters_list.html:225
 msgid "voters loaded"
 msgstr "eleitor (es) carregados"
 
-#: helios/templates/voters_list.html:228
+#: helios/templates/voters_list.html:229
 msgid "currently processing"
 msgstr "processando"
 
-#: helios/templates/voters_list.html:230
+#: helios/templates/voters_list.html:231
 msgid "not yet processed"
 msgstr "Recarregue a página para exibir a lista de eleitores"
 
-#: helios/templates/voters_list.html:243
+#: helios/templates/voters_list.html:244
 msgid "email voters"
 msgstr "enviar email para eleitores"
+
+#: helios/templates/voters_list.html:253
+#, fuzzy
+#| msgid "voters loaded"
+msgid "New voters were loaded,"
+msgstr "Novo(s) eleitor (es) carregados"
+
+#: helios/templates/voters_list.html:253
+#, fuzzy
+#| msgid "clicking here"
+msgid "click here"
+msgstr "clique aqui"
+
+#: helios/templates/voters_list.html:253
+msgid "to update the page and load more updated informations!"
+msgstr "para atualizar a página e carregar as informações mais atualizadas!"
 
 #: helios/templates/voters_manage.html:5
 msgid "Manage Voters"
@@ -2212,8 +3859,8 @@ msgid ""
 "You have uploaded a file of voters. The first few rows of this file are:\n"
 msgstr ""
 "\n"
-"Você carregou um arquivo de eleitores. <u>As primeiras linhas desse arquivo são "
-"exibidas abaixo para simples conferência</u>:\n"
+"Você carregou um arquivo de eleitores. <u>As primeiras linhas desse arquivo "
+"são exibidas abaixo para simples conferência</u>:\n"
 
 #: helios/templates/voters_upload_confirm.html:14
 msgid "Voter Login"
@@ -2234,6 +3881,108 @@ msgstr "Sim, carregar"
 #: helios/templates/voters_upload_confirm.html:45
 msgid "no, let me upload a different file"
 msgstr "Não, deixe-me carregar um arquivo diferente"
+
+#: helios/utils.py:79
+msgid "not implemented yet"
+msgstr "não implementado ainda"
+
+#: helios/views.py:184
+msgid "only an administrator has elections to administer"
+msgstr "somente um administrador tem eleições para administrar"
+
+#: helios/views.py:202
+msgid "only an administrator can create an election"
+msgstr "somente um administrador pode criar uma eleição"
+
+#: helios/views.py:235
+msgid "No special characters allowed in the short name."
+msgstr "Nenhum caracter especial é permitido no nome abreviado"
+
+#: helios/views.py:336
+#, python-format
+msgid "Vote in %(election_name)s"
+msgstr "Votar em %(election_name)s"
+
+#: helios/views.py:339
+#, python-format
+msgid "Register to vote in %(election_name)s"
+msgstr "Registre-se para votar %(election_name)s"
+
+#: helios/views.py:344
+#, python-format
+msgid "Results are in for %(election_name)s"
+msgstr "Os resultados estão em %(election_name)s"
+
+#: helios/views.py:459
+#, python-format
+msgid "You are a trustee for %(election_name)s \n"
+msgstr ""
+"Prezado (a),  \n"
+"\n"
+"Você foi designado como apurador para a eleição %(election_name)s.\n"
+"\n"
+
+#: helios/views.py:460
+#, python-format
+msgid ""
+"Your trustee dashboard is at: \n"
+" %(url)s"
+msgstr ""
+"Você deve obrigatoriamente entrar no endereço abaixo para que possa carregar "
+"suas informações de apurador. Se não fizer isto, não será possível dar "
+"continuidade a eleição. Ou seja, nenhum eleitor poderá votar nesta "
+"eleição. \n"
+"\n"
+"A sua página de apurador pode ser acessada no endereço: \n"
+"\n"
+" %(url)s \n"
+"\n"
+"ATENÇÃO: Esse e-mail deve ser guardado para referência futura, para que você "
+"possa acessar novamente sua página de apurador através do link fornecido "
+"acima."
+
+#: helios/views.py:467
+#, python-format
+msgid "your trustee homepage for %(election_name)s"
+msgstr ""
+"ATENÇÃO: Você foi designado como apurador para a eleição  %(election_name)s"
+
+#: helios/views.py:683
+#, python-format
+msgid "I voted in %(url)s - my smart tracker is %(vote_hash)s.. #heliosvoting"
+msgstr "Eu votei em %(url)s - meu comprovante é %(vote_hash)s.. #heliosvoting"
+
+#: helios/views.py:981
+msgid "registration is closed for this election"
+msgstr "registro fechado para essa eleição"
+
+#: helios/views.py:1250
+msgid "Constraints successfully saved"
+msgstr "Restrições salvas com sucesso."
+
+#: helios/views.py:1303
+msgid "no voter file specified, try again"
+msgstr "nenhum arquivo carregado, tente novamente"
+
+#: helios/views.py:1325
+msgid "Time to Vote"
+msgstr "Hora de Votar"
+
+#: helios/views.py:1326
+msgid "Simple"
+msgstr "Simples"
+
+#: helios/views.py:1327
+msgid "Additional Info"
+msgstr "Informação Adicional"
+
+#: helios/views.py:1328
+msgid "Election Result"
+msgstr "Resultado da Eleição"
+
+#: helios/views.py:1333
+msgid "bad template"
+msgstr "template inválido"
 
 #: helios_auth/auth_systems/shibboleth.py:25
 msgid "Click here to login"
@@ -2266,6 +4015,18 @@ msgstr ""
 msgid "logout"
 msgstr "sair"
 
+#: helios_auth/templates/password/forgot.html:4
+msgid "Password Forgotten"
+msgstr "Esqueci a Senha"
+
+#: helios_auth/templates/password/forgot.html:18
+msgid "Your Username"
+msgstr "Seu nome de usuário"
+
+#: helios_auth/templates/password/forgot.html:18
+msgid "Send Reminder"
+msgstr "Enviar Lembrete"
+
 #: helios_auth/templates/perms_why.html:4
 msgid "Why we need your information"
 msgstr "Por que nós precisamos de suas informações"
@@ -2297,18 +4058,6 @@ msgstr "Ok, entendi, vamos efetuar o login"
 #: helios_auth/templates/perms_why.html:20
 msgid "nope, get me out of here"
 msgstr "não, tire-me daqui"
-
-#: helios_auth/templates/password/forgot.html:4
-msgid "Password Forgotten"
-msgstr "Esqueci a Senha"
-
-#: helios_auth/templates/password/forgot.html:18
-msgid "Your Username"
-msgstr "Seu nome de usuário"
-
-#: helios_auth/templates/password/forgot.html:18
-msgid "Send Reminder"
-msgstr "Enviar Lembrete"
 
 #: helios_auth/templates/shibboleth/missing_attributes.html:9
 msgid "Missing Attributes"
@@ -2457,43 +4206,6 @@ msgstr "Gestor de Eleição"
 #: heliosinstitution/models.py:156
 msgid "Undefined"
 msgstr "Indefinido"
-
-#: heliosinstitution/views.py:109
-msgid "Please, provide a valid expires at value"
-msgstr "Por favor, informe uma data válida de expiração"
-
-#: heliosinstitution/views.py:121
-msgid "Expires at successfully saved."
-msgstr "Data de expiração salva com sucesso."
-
-#: heliosinstitution/views.py:125
-msgid "Something went wrong, please try again."
-msgstr "Ocorreu um erro, por favor, tente novamente."
-
-#: heliosinstitution/views.py:127 heliosinstitution/views.py:176
-msgid "An e-mail must be informed"
-msgstr "Um e-mail precisa ser informado"
-
-#: heliosinstitution/views.py:174
-msgid "E-mail successfully saved"
-msgstr "E-mail salvo com sucesso"
-
-#: heliosinstitution/views.py:201
-msgid "User successfully removed"
-msgstr "Usuário removido com sucesso."
-
-#: heliosinstitution/views.py:203
-msgid "User not found"
-msgstr "Usuário não encontrado"
-
-#: heliosinstitution/views.py:265 heliosinstitution/views.py:267
-#: heliosinstitution/views.py:269 heliosinstitution/views.py:271
-msgid "Success"
-msgstr "Sucesso"
-
-#: heliosinstitution/views.py:274
-msgid "Institution does not exist"
-msgstr "A instituição não existe"
 
 #: heliosinstitution/templates/dropdown.html:3
 msgid "All"
@@ -2649,14 +4361,6 @@ msgid "Expires at"
 msgstr "Expira em"
 
 #: heliosinstitution/templates/institution_users.html:24
-msgid "Yes"
-msgstr "Sim"
-
-#: heliosinstitution/templates/institution_users.html:24
-msgid "No"
-msgstr "Não"
-
-#: heliosinstitution/templates/institution_users.html:24
 msgid "User did not logged yet"
 msgstr "Usuário não logou ainda"
 
@@ -2684,11 +4388,6 @@ msgstr "Ver meus detalhes"
 msgid "Delegate Institution Admin"
 msgstr "Delegar Gestor da Instituição"
 
-#: heliosinstitution/templates/manage_users.html:11
-#: heliosinstitution/templates/manage_users.html:23
-msgid "Email address"
-msgstr "Endereço de e-mail"
-
 #: heliosinstitution/templates/manage_users.html:12
 #: heliosinstitution/templates/manage_users.html:24
 msgid "Enter email"
@@ -2702,11 +4401,6 @@ msgstr "Adicionar"
 #: heliosinstitution/templates/manage_users.html:20
 msgid "Add new Election Admin"
 msgstr "Adicionar novo Gestor de Eleição"
-
-#: heliosinstitution/templates/navbar-bootstrap.html:15
-#: server_ui/templates/navbar.html:9
-msgid "Home"
-msgstr "Início"
 
 #: heliosinstitution/templates/navbar-bootstrap.html:24
 #: server_ui/templates/navbar.html:18
@@ -2753,9 +4447,42 @@ msgstr ""
 msgid "Released attributes by your Identity Provider"
 msgstr "Atributos fornecidos pelo seu Provedor de Identidade"
 
-#: helioslog/models.py:18
-msgid "Delete"
-msgstr "Apagar"
+#: heliosinstitution/views.py:109
+msgid "Please, provide a valid expires at value"
+msgstr "Por favor, informe uma data válida de expiração"
+
+#: heliosinstitution/views.py:121
+msgid "Expires at successfully saved."
+msgstr "Data de expiração salva com sucesso."
+
+#: heliosinstitution/views.py:125
+msgid "Something went wrong, please try again."
+msgstr "Ocorreu um erro, por favor, tente novamente."
+
+#: heliosinstitution/views.py:127 heliosinstitution/views.py:176
+msgid "An e-mail must be informed"
+msgstr "Um e-mail precisa ser informado"
+
+#: heliosinstitution/views.py:174
+msgid "E-mail successfully saved"
+msgstr "E-mail salvo com sucesso"
+
+#: heliosinstitution/views.py:201
+msgid "User successfully removed"
+msgstr "Usuário removido com sucesso."
+
+#: heliosinstitution/views.py:203
+msgid "User not found"
+msgstr "Usuário não encontrado"
+
+#: heliosinstitution/views.py:265 heliosinstitution/views.py:267
+#: heliosinstitution/views.py:269 heliosinstitution/views.py:271
+msgid "Success"
+msgstr "Sucesso"
+
+#: heliosinstitution/views.py:274
+msgid "Institution does not exist"
+msgstr "A instituição não existe"
 
 #: helioslog/models.py:19
 msgid "Modify"
@@ -3219,6 +4946,14 @@ msgid ""
 "</ul>\n"
 msgstr ""
 
+#: settings.py:93
+msgid "English"
+msgstr "Inglês"
+
+#: settings.py:94
+msgid "Brazilian Portuguese"
+msgstr "Português Brasileiro"
+
 #: templates/403.html:3
 msgid "Could not complete your request"
 msgstr "Não foi possível completar sua requisição"
@@ -3252,17 +4987,15 @@ msgstr "Erro no servidor"
 msgid "There was an error while handling your request."
 msgstr "Houve um erro durante o processamento de sua requisição."
 
-#: helios/tasks.py:108
-msgid "The encrypted tally for election %s has been computed. %s"
-msgstr "A apuração encriptada da eleição '%s' foi processada. %s"
+#~ msgid "anyone can vote"
+#~ msgstr ""
+#~ "Qualquer eleitor que tenha um nome de usuário e senha no LDAP da Unicamp"
 
-#: helios/tasks.py:126
-msgid "Helios has decrypted its portion of the tally for election %s. %s"
-msgstr "O sistema e-Voto, como apurador padrão, está desencriptando a parte dele da apuração para a eleição '%s'. %s"
+#~ msgid "Unicamp Sistema e-voto"
+#~ msgstr "Sistema de Votação Online da Unicamp"
 
-#: helios/tasks.py:141
-msgid "Your voter file upload for election %s has been processed. %s voters have been created. %s"
-msgstr "Seu arquivo CSV com colégio eleitoral para eleição '%s' foi processado. %s eleitores foram criados. %s"
+#~ msgid "Welcome to Unicamp Sistema e-voto"
+#~ msgstr "Bem Vindo ao Sistema de Votação Online da Unicamp"
 
 #~ msgid "New"
 #~ msgstr "Novo"
@@ -3513,10 +5246,6 @@ msgstr "Seu arquivo CSV com colégio eleitoral para eleição '%s' foi processad
 
 #~ msgid "type"
 #~ msgstr "tipo"
-
-#, fuzzy
-#~ msgid "name"
-#~ msgstr "Nome de usuário"
 
 #, fuzzy
 #~ msgid ""

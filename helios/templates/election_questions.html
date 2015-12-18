@@ -52,6 +52,12 @@
   }
 
   function question_add(form) {
+      var min = parseInt($(form.min).val(), 10);
+      var max = parseInt($(form.max).val(), 10);
+      if (min > max) {
+        alert('{% trans "Minimum value must be lower than the highest." %}');
+        return false;
+      }
       var new_q = get_question_from_form(form);
       QUESTIONS.push(new_q);
       save_questions(refresh);
@@ -75,10 +81,14 @@
     // set the default values for this question
     var form = $('#question_edit_' + q_num + '_form');
     var q_data = QUESTIONS[q_num];
-    form[0].min.value = q_data.min;
-    form[0].max.value = q_data.max;
-    form[0].question.value = q_data.question;
-    form[0].result_type.value = q_data.result_type;
+    // form[0].min.value = q_data.min;
+    // form[0].max.value = q_data.max;
+    // form[0].question.value = q_data.question;
+    // form[0].result_type.value = q_data.result_type;
+    $(form[0].min).val(q_data.min);
+    $(form[0].max).val(q_data.max);
+    $(form[0].question).val(q_data.question);
+    $(form[0].result_type).val(q_data.result_type);
 
     // add the answers
     var answer_table = $('#answer_table_' + q_num);
@@ -94,9 +104,15 @@
   }
 
   function question_update(q_num, form) {
-      var new_q = get_question_from_form(form);
-      QUESTIONS[q_num] = new_q;
-      save_questions(refresh);
+    var min = parseInt($(form.min).val(), 10);
+    var max = parseInt($(form.max).val(), 10);
+    if (min > max) {
+      alert('{% trans "Minimum value must be lower than the highest." %}');
+      return false;
+    }
+    var new_q = get_question_from_form(form);
+    QUESTIONS[q_num] = new_q;
+    save_questions(refresh);
   }
 
   var DEFAULT_NUM_ANSWERS = 5;

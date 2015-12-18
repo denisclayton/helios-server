@@ -46,6 +46,11 @@ from models import *
 
 import forms, signals
 
+from django.utils import timezone
+from django.utils.timezone import utc
+from datetime import timedelta
+
+
 # Parameters for everything
 ELGAMAL_PARAMS = elgamal.Cryptosystem()
 
@@ -1133,7 +1138,7 @@ def one_election_set_result_and_proof(request, election):
   
   
 @election_view()
-def voters_list_pretty(request, election):
+def voters_list_pretty(request, election, reload_page=0):
   """
   Show the list of voters
   now using Django pagination
@@ -1185,7 +1190,8 @@ def voters_list_pretty(request, election):
     
   return render_template(request, 'voters_list', 
                          {'election': election, 'voters_page': voters_page,
-                          'voters': voters_page.object_list, 'admin_p': admin_p, 
+                          'reload': reload_page,
+                          'voters': voters_page.object_list, 'admin_p': admin_p,
                           'email_voters': helios.VOTERS_EMAIL,
                           'limit': limit, 'total_voters': total_voters,
                           'upload_p': helios.VOTERS_UPLOAD, 'q' : q,
@@ -1268,7 +1274,9 @@ def voters_upload(request, election):
       tasks.voter_file_process.delay(voter_file_id = request.session['voter_file_id'])
       del request.session['voter_file_id']
 
-      return HttpResponseRedirect(settings.SECURE_URL_HOST + reverse(voters_list_pretty, args=[election.uuid]))
+      # Since we are trying to implement a reload warning to the user, we must pass a 'true' value here
+      reload_page = 1
+      return HttpResponseRedirect(settings.SECURE_URL_HOST + reverse(voters_list_pretty, args=[election.uuid, reload_page]))
     else:
       # we need to confirm
       if request.FILES.has_key('voters_file'):
@@ -1461,5 +1469,33 @@ def ballot_list(request, election):
   return [v.last_cast_vote().ld_object.short.toDict(complete=True) for v in voters]
 
 
+@election_view()
+@return_json
+def voters_list_check_load(request, election, reload_page=0):
+    """
+    Check if the celery task already loaded the latest voters list import
+    """
 
+    user = get_user(request)
+    admin_p = security.user_can_admin_election(user, election)
 
+    categories = None
+    eligibility_category_id = None
+
+    try:
+        if admin_p and can_list_categories(user.user_type):
+            categories = AUTH_SYSTEMS[user.user_type].list_categories(user)
+            eligibility_category_id = election.eligibility_category_id(user.user_type)
+    except AuthenticationExpired:
+        return user_reauth(request, user)
+
+    # LATEST FILE PROCESSED!!!
+    ok = False
+    reload_page = int(reload_page)
+    if reload_page == 1:
+        print "-" * 10
+        print reload_page
+        voter_file = election.voterfile_set.all().order_by('-id', '-processing_started_at', 'processing_finished_at')[0]
+        if (voter_file.processing_started_at and voter_file.processing_finished_at):
+            ok = True
+    return {'update': ok}

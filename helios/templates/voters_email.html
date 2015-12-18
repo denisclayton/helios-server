@@ -27,7 +27,7 @@ voter_id = '{{voter.voter_id}}';
 <ul class="nav nav-pills nav-stacked">
 {% for template_option in templates %}
 {% if template_option.0 == template %}
-<li class="active"><a href="?template={{template_option.1}}">{{template_option.1}}</a></li>
+<li class="active"><a href="?template={{template_option.0}}">{{template_option.1}}</a></li>
 {% else %}
 <li><a href="?template={{template_option.0}}&voter_id={{voter.voter_login_id}}">{{template_option.1}}</a></li>
 {% endif %}

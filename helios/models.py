@@ -260,8 +260,8 @@ class Election(HeliosModel):
 
     new_voter_file = VoterFile(election = self, voter_file_content = uploaded_file.read())
     new_voter_file.save()
-    
-    self.append_log(ElectionLog.VOTER_FILE_ADDED)
+
+    # self.append_log(ElectionLog.VOTER_FILE_ADDED)
     return new_voter_file
   
   def user_eligible_p(self, user):
@@ -768,9 +768,13 @@ class VoterFile(models.Model):
     self.num_voters = num_voters
     self.processing_finished_at = datetime.datetime.utcnow()
     self.save()
-
+    self.append_log(ElectionLog.VOTER_FILE_ADDED)
     return num_voters
 
+  def append_log(self, text):
+    item = ElectionLog(election = self.election, log=text, at=datetime.datetime.utcnow())
+    item.save()
+    return item
 
     
 class Voter(HeliosModel):
