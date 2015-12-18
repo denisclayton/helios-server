@@ -34,8 +34,9 @@ urlpatterns = patterns('',
   (r'^elections/voted$', elections_voted),
   
   (r'^elections/(?P<election_uuid>[^/]+)', include('helios.election_urls')),
-  
-  
+  # Add to support parameter to reload page!
+  (r'^elections/(?P<election_uuid>[^/]+)/(?P<reload_page>[^/]+)', include('helios.election_urls')),
+
   (r'^heliosinstitution/', include('heliosinstitution.urls')),
   
 )

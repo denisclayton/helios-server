@@ -246,37 +246,85 @@
 	</div>
 {% endif %}
 
+<div id="notificationUpdate" style="display: none; position: fixed;bottom: 0px;background-color: #e57373;color: 999;width: 100%;left: 0px;padding: 8px;">
+    <div class="container">
+        <i class="glyphicon glyphicon-info-sign" style="font-size: 1.5em; float: left;"></i>&nbsp;
+        <div style="text-align: center;float:right;width: 90%;">
+            {% trans "New voters were loaded," %} <a id="reloadPage" href="{% url "helios.views.voters_list_pretty" election.uuid %}#third_row" onclick="window.location.reload()" style="color: #E0E0E0;font-weight:bold;text-shadow: 1px 1px 1px #555555;">{% trans "click here" %}</a> {% trans "to update the page and load more updated informations!" %}
+        </div>
+    </div>
+</div>
+
 <script type="text/javascript">
-	$(document).ready(function() {
-	{% if election.eligibility.0.auth_system == 'shibboleth' and election.eligibility.0.constraint.0.items %}
-		$(function(){
-			$('div.shib-attr-panel').removeClass('hidden');
-		});
-	 	{% for key, value in election.eligibility.0.constraint.0.items %}
-			$(function() {
-				var row = $('#attribute_0').clone();
-				$(row).attr('id','attribute_' + '{{forloop.counter}}');
-				if ('{{forloop.counter}}' == '1') {
-					$('#attribute_0').children('select[name="attribute_name"]').val("{{key}}");
-					$('#attribute_0').children('input[name="cafe_attribute_values[]"]').val("{{value}}");
-				} else {
-					if ($('select[name="attribute_name"] option[value="{{key}}"]').val() !== undefined) {
-						$(row).children('select[name="attribute_name"]').val("{{key}}");
-						$(row).children('input[name="cafe_attribute_values[]"]').val("{{value}}");
-						$(row).children('span:last').attr('class','remove_cafe_attribute input-group-addon glyphicon glyphicon-minus');
-						 $(row).insertAfter('div.cafe_attribute:last');
-					}
-				}
-	 		});
-	 	{% endfor %}
-	{% else %}
-		$(function(){
-			if ($('input[id="csv_type"]').attr("checked")) {
-				$('a#upload_voters').removeClass('hidden');
-			}
-		});
-	{% endif %}
-});
+    // Making this a global js var to make sure its accessible inside any function call
+    var interval;
+    var stopLoading = 0;
+
+    // Stop the verify interval
+    function stopInterval() {
+        clearInterval(interval);
+    }
+
+    // Ajax call to check if the latest list is already loaded!!
+    function verifyProcessedVotersList() {
+        var size = $("#third_row > div > table > tbody > tr").length - 1;
+        size = size >= 0 ? size : 0;
+        $.ajax({
+            url: "{% url "helios.views.voters_list_check_load" election.uuid reload %}",
+            type: 'POST',
+            data: {
+                size: size
+            },
+            success: function(data, textStatus) {
+                stopLoading++;
+                if (data.update) {
+                    // OK!!! Lets reload the page, the process is done!
+                    // location.reload(true);
+                    $('#notificationUpdate').show();
+                } else {
+                    if(stopLoading > 10) {
+                        stopInterval();
+                    }
+                }
+            }
+        });
+
+    };
+
+    $(document).ready(function() {
+        // After the page is fully rendered lets begin the check every 2 secs
+        verifyProcessedVotersList();
+        interval = setInterval(verifyProcessedVotersList, 5000);
+
+        {% if election.eligibility.0.auth_system == 'shibboleth' and election.eligibility.0.constraint.0.items %}
+            $(function(){
+                $('div.shib-attr-panel').removeClass('hidden');
+            });
+            {% for key, value in election.eligibility.0.constraint.0.items %}
+                $(function() {
+                    var row = $('#attribute_0').clone();
+                    $(row).attr('id','attribute_' + '{{forloop.counter}}');
+                    if ('{{forloop.counter}}' == '1') {
+                        $('#attribute_0').children('select[name="attribute_name"]').val("{{key}}");
+                        $('#attribute_0').children('input[name="cafe_attribute_values[]"]').val("{{value}}");
+                    } else {
+                        if ($('select[name="attribute_name"] option[value="{{key}}"]').val() !== undefined) {
+                            $(row).children('select[name="attribute_name"]').val("{{key}}");
+                            $(row).children('input[name="cafe_attribute_values[]"]').val("{{value}}");
+                            $(row).children('span:last').attr('class','remove_cafe_attribute input-group-addon glyphicon glyphicon-minus');
+                             $(row).insertAfter('div.cafe_attribute:last');
+                        }
+                    }
+                });
+            {% endfor %}
+        {% else %}
+            $(function(){
+                if ($('input[id="csv_type"]').attr("checked")) {
+                    $('a#upload_voters').removeClass('hidden');
+                }
+            });
+        {% endif %}
+    });
 </script>
 
 {% endblock %}

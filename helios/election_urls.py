@@ -79,6 +79,8 @@ urlpatterns = patterns('',
     (r'^/voters/upload$', voters_upload),
     (r'^/voters/upload-cancel$', voters_upload_cancel),
     (r'^/voters/list$', voters_list_pretty),
+    # Just the new check routine to see if the celery already load in database voters list
+    (r'^/voters/checkload$', voters_list_check_load),
     (r'^/voters/eligibility$', voters_eligibility),
     (r'^/voters/email$', voters_email),
     (r'^/voters/(?P<voter_uuid>[^/]+)$', one_voter),
